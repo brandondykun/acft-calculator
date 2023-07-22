@@ -6,7 +6,10 @@ const HrpPage = () => {
       <h1 className="text-3xl mb-8 text-amber-400 p-8 text-center md:text-left">
         HAND RELEASE PUSHUP - ARM EXTENSION (HRP)
       </h1>
-      <p className="w-full md:w-4/6 md:m-auto py-8 text-xl">
+      <p className="w-full md:w-4/6 md:m-auto py-8 text-md md:text-lg relative p-4 dark:border-stone-400 dark:border-solid dark:border rounded-md dark:border-opacity-30 md:p-12 md:mb-16">
+        <span className="absolute top-[-10px] left-10 bg-stone-950 px-4 text-stone-400 text-sm">
+          HRP
+        </span>
         The HRP assesses the Muscular Endurance component of fitness by
         measuring a Soldier’s upper body endurance. The HRP is a strong driver
         for upper body and core strength training. Flexibility is a secondary
