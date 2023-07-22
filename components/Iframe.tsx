@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 const Iframe = ({ ...rest }) => {
   const [windowWidth, setWindowWidth] = useState(200);
+  const [windowExists, setWindowExists] = useState(false);
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -23,6 +24,7 @@ const Iframe = ({ ...rest }) => {
 
   useEffect(() => {
     if (window !== undefined) {
+      setWindowExists(true);
       if (window.innerWidth < 400) {
         setWindowWidth(window.innerWidth - 40);
       } else {
@@ -35,7 +37,7 @@ const Iframe = ({ ...rest }) => {
 
   return (
     <>
-      {!window ? null : (
+      {!windowExists ? null : (
         <iframe
           {...rest}
           width={calculatedWidth}
