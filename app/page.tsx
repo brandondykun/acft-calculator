@@ -65,13 +65,15 @@ export default function Home() {
         <SdcSlider sdcRaw={sdcRaw} setSdcRaw={setSdcRaw} sdcScore={sdcScore} />
         <PlkSlider plkRaw={plkRaw} setPlkRaw={setPlkRaw} plkScore={plkScore} />
         <TmrSlider tmrRaw={tmrRaw} setTmrRaw={setTmrRaw} tmrScore={tmrScore} />
-        <div className="py-6 text-2xl text-stone-100 text-center">{`${totalScore} / 600`}</div>
-        <div
-          className={`${
-            scorePassing ? "text-green-600" : "text-red-600"
-          } text-xl text-center`}
-        >
-          {scorePassing ? "Pass" : "Fail"}
+        <div className="py-12">
+          <div
+            className={`${
+              scorePassing ? "text-green-600" : "text-red-600"
+            } text-2xl text-center pb-6`}
+          >
+            {scorePassing ? "Meets Standard" : "Does Not Meet Standard"}
+          </div>
+          <div className="text-2xl text-stone-100 text-center">{`${totalScore} / 600`}</div>
         </div>
       </div>
     </main>
