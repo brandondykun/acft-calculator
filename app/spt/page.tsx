@@ -30,7 +30,7 @@ const SptPage = () => {
 
       <div className="w-full md:w-4/6 mx-auto my-16">
         <div className="font-bold text-2xl mb-4">Starting Position</div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           The Soldiers will face away from the start line, grasp the medicine
           ball (10 pounds) with both hands at hip level and stand with both
           heels at (but not on or over) the start line. Grasp the ball firmly
@@ -42,7 +42,7 @@ const SptPage = () => {
 
       <div className="w-full md:w-4/6 mx-auto my-16">
         <div className="font-bold text-2xl mb-4">Record Throws</div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           Soldiers will have two record attempts on the Standing Power Throw.
           Soldiers are permitted several preparatory movements flexing at the
           trunk, knees and hips while lowering the ball between their legs.
@@ -59,7 +59,7 @@ const SptPage = () => {
       </div>
 
       <div className="w-full md:w-4/6 mx-auto my-16">
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           If a Soldier faults on the first record throw, they will receive a raw
           score of 0.0 meters. In the event a Soldier faults on both throw
           attempts, the grader gives the Soldier one more attempt to score a
@@ -70,7 +70,7 @@ const SptPage = () => {
       </div>
 
       <div className="w-full md:w-4/6 mx-auto my-16">
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           Once the Soldier has attempted two record throws, they will move onto
           the SPT lane to retrieve the medicine balls for the next Soldiers, and
           then return to the back of the line.
@@ -78,7 +78,7 @@ const SptPage = () => {
       </div>
 
       <div className="w-full md:w-4/6 mx-auto my-16">
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           Although Soldiers are required to execute two record throws and both
           record throws are recorded, only the longer of the two throws will
           count as the record score. The start line grader will circle the best

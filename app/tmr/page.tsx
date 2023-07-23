@@ -28,7 +28,7 @@ const TmrPage = () => {
       </div>
 
       <div className="w-full md:w-4/6 mx-auto my-16">
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           The two mile run can be completed on an indoor or outdoor track, or an
           improved surface such as a road or sidewalk. The 2MR cannot be tested
           on unimproved terrain. The start and finish line will be near the same

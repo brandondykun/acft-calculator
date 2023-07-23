@@ -32,7 +32,7 @@ const MdlPage = () => {
 
       <div className="w-full md:w-4/6 mx-auto my-16">
         <div className="font-bold text-2xl mb-4">Phase 1 Preparatory Phase</div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           On the command of “GET SET,” the Soldier steps inside the hex bar,
           feet shoulder width apart, and locates the mid-point of the hex bar
           handles. The Soldier bends at the knees and hips, reaches down and
@@ -47,7 +47,7 @@ const MdlPage = () => {
         <div className="font-bold text-2xl mb-4">
           Phase 2 Upward Movement Phase
         </div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           On the command of “GO,” the Soldier lifts the bar by straightening the
           hips and knees in order to reach the Straddle Stance. The hips should
           not rise before or above the shoulders. The back should remain
@@ -61,7 +61,7 @@ const MdlPage = () => {
         <div className="font-bold text-2xl mb-4">
           Phase 3 Downward Movement Phase
         </div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           After reaching the Straddle Stance position, the Soldier lowers the
           bar back to the ground under control while maintaining a straight
           back. The bar must be placed on the ground and not dropped. The weight

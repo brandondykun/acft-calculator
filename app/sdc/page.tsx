@@ -32,7 +32,7 @@ const SdcPage = () => {
 
       <div className="w-full md:w-4/6 mx-auto my-16">
         <div className="font-bold text-2xl mb-4">Starting position</div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           On the command “GET SET,” one Soldier in each lane will assume the
           prone position with the top of the head behind the start line. The
           grader is positioned to see both the start line and the 25m line. The
@@ -43,7 +43,7 @@ const SdcPage = () => {
 
       <div className="w-full md:w-4/6 mx-auto my-16">
         <div className="font-bold text-2xl mb-4">Sprint</div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           On the command “GO,” Soldiers stand and sprint 25m; touch the 25m line
           with foot and hand; turn and sprint back to the start line. If the
           Soldier fails to touch the 25m line with hand and foot, the grader
@@ -53,7 +53,7 @@ const SdcPage = () => {
 
       <div className="w-full md:w-4/6 mx-auto my-16">
         <div className="font-bold text-2xl mb-4">Drag</div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           Soldiers will grasp each strap handle, which will be positioned and
           resting on the sled behind the start line; pull the sled backwards
           until the entire sled crosses the 25m line; turn the sled around and
@@ -65,7 +65,7 @@ const SdcPage = () => {
 
       <div className="w-full md:w-4/6 mx-auto my-16">
         <div className="font-bold text-2xl mb-4">Lateral</div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           After the entire sled crosses the start line, the Soldier will perform
           a lateral for 25m, touch the 25m turn line with foot and hand, and
           perform the lateral back to the start line. The Soldier will face the
@@ -79,7 +79,7 @@ const SdcPage = () => {
 
       <div className="w-full md:w-4/6 mx-auto my-16">
         <div className="font-bold text-2xl mb-4">Carry</div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           Soldiers will grasp the handles of the two 40-pound kettlebells and
           run to the 25m turn line; step on or over the 25m turn line with one
           foot; turn and run back to the start line. If the Soldier drops the
@@ -92,7 +92,7 @@ const SdcPage = () => {
 
       <div className="w-full md:w-4/6 mx-auto my-16">
         <div className="font-bold text-2xl mb-4">Sprint</div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           After stepping on/over the start line, Soldiers will place the
           kettlebells on the ground; turn and sprint 25m; touch the 25m turn
           line with foot and hand; turn and sprint back to the start line. If
@@ -102,7 +102,7 @@ const SdcPage = () => {
       </div>
 
       <div className="w-full md:w-4/6 mx-auto my-16">
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           The time is stopped when the Soldier crosses the start line after the
           final sprint (250 meters).
         </p>

@@ -29,7 +29,7 @@ const PlkPage = () => {
 
       <div className="w-full md:w-4/6 mx-auto my-16">
         <div className="font-bold text-2xl mb-4">Starting position</div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           On the command “GET READY” hands must be on the ground, either in
           fists with pinky side of the hand touching the ground or lying flat
           with palms down, no more than the grader’s fist-width apart; elbows
@@ -41,7 +41,7 @@ const PlkPage = () => {
 
       <div className="w-full md:w-4/6 mx-auto my-16">
         <div className="font-bold text-2xl mb-4">Execution</div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           On the command “GET SET,” the Soldier lifts both knees off the ground
           and moves the hips into a straight line with the legs, shoulders, head
           and eyes focused on the ground, similar to the “Front Leaning Rest.”
@@ -57,7 +57,7 @@ const PlkPage = () => {
       </div>
 
       <div className="w-full md:w-4/6 mx-auto my-16">
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           To maintain proper plank position, the head, shoulders, back, hips,
           and legs must remain in a straight-line position from head to heels
           throughout the event. Feet, forearms, and fists/palms must remain in
@@ -66,7 +66,7 @@ const PlkPage = () => {
       </div>
 
       <div className="w-full md:w-4/6 mx-auto my-16">
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           As long as the hands remain in contact with the ground, Soldiers may
           change hand position from the fist-pinky side down to palms down
           during the plank.
@@ -74,7 +74,7 @@ const PlkPage = () => {
       </div>
 
       <div className="w-full md:w-4/6 mx-auto my-16">
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           The Plank event is terminated if the Soldier touches the ground with
           any part of the body other than the feet, forearms or fists/palms,
           raises a foot or hand off the floor, or fails to maintain a
@@ -83,7 +83,7 @@ const PlkPage = () => {
       </div>
 
       <div className="w-full md:w-4/6 mx-auto my-16">
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           Graders will give one verbal warning to correct failure to maintain
           the proper plank position or if the hands/feet slide from the required
           position. If the Soldier is unable to correct a deficiency or maintain
@@ -93,7 +93,7 @@ const PlkPage = () => {
       </div>
 
       <div className="w-full md:w-4/6 mx-auto my-16">
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           Shaking or trembling as a result of maximum exertion is permitted as
           long as the proper plank position is maintained.
         </p>

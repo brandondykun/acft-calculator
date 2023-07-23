@@ -30,7 +30,7 @@ const HrpPage = () => {
 
       <div className="w-full md:w-4/6 mx-auto my-16">
         <div className="font-bold text-2xl mb-4">Starting position</div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           On the command of “GET SET,” one Soldier in each lane will assume the
           prone position facing the start line with hands flat on the ground and
           index fingers inside the outer edges of the shoulders. The chest and
@@ -45,22 +45,22 @@ const HrpPage = () => {
 
       <div className="w-full md:w-4/6 mx-auto my-16">
         <div className="font-bold text-2xl mb-4">Movement 1</div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           On the command “GO,” a Soldier will push their whole body up from the
           ground as a single unit to the up position by fully extending the
           elbows (front leaning rest).
         </p>
         <ul className="px-8 py-6">
-          <li className="pb-4">
+          <li className="mb-4">
             The Soldier will maintain a generally straight body alignment from
             the top of the head to the ankles. This generally straight position
             will be maintained for the duration of the HRP.
           </li>
-          <li className="pb-4">
+          <li className="mb-4">
             Failing to maintain a generally straight alignment during a
             repetition will cause that repetition to not count.
           </li>
-          <li>
+          <li className="mb-4">
             The front leaning rest is the only authorized rest position. Bending
             or flexing the knees, hips, trunk, or neck while in the rest
             position is not authorized.
@@ -70,7 +70,7 @@ const HrpPage = () => {
 
       <div className="w-full md:w-4/6 mx-auto my-16">
         <div className="font-bold text-2xl mb-4">Movement 2</div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           After the elbows are fully extended and the Soldier has reached the up
           position, the Soldier will bend their elbows to lower the body back to
           the ground. The chest, hips and thighs should touch down at the same
@@ -80,7 +80,7 @@ const HrpPage = () => {
 
       <div className="w-full md:w-4/6 mx-auto my-16">
         <div className="font-bold text-2xl mb-4">Movement 3</div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           The hand release — without moving the head, body or legs, the Soldier
           fully extends both arms into the T position until the arms are
           generally straight out to the side. The arms and hands may touch or
@@ -90,7 +90,7 @@ const HrpPage = () => {
 
       <div className="w-full md:w-4/6 mx-auto my-16">
         <div className="font-bold text-2xl mb-4">Movement 4</div>
-        <p>
+        <p className="pl-4 dark:border-l dark:border-l-amber-400 dark:border-l-solid dark:border-opacity-50">
           The Soldier immediately moves his or her hands back on the ground to
           return to the starting position to complete the repetition.
         </p>
