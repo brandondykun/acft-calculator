@@ -9,7 +9,8 @@ const space_grotesk = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "ACFT Calculator",
-  description: "Army ACFT calculator.",
+  description:
+    "Army ACFT calculator. Calculate ACFT score based on performance in each event. View min and max scores for each event.",
 };
 
 export default function RootLayout({

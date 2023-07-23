@@ -1,4 +1,5 @@
 import Iframe from "@/components/Iframe";
+import sptImage from "../../public/powerthrow.svg";
 
 const SptPage = () => {
   return (
@@ -16,7 +17,7 @@ const SptPage = () => {
         SPT include Balance, Coordination and Flexibility.
       </p>
 
-      <div className="w-fit mx-auto my-12">
+      <div className="w-fit mx-auto my-20">
         <Iframe
           width="560"
           height="315"
@@ -26,6 +27,17 @@ const SptPage = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></Iframe>
+      </div>
+
+      <div className="relative">
+        <div className="h-[1px] dark:bg-stone-400 absolute top-[50%] left-0 right-0 md:left-[15%] md:right-[15%]"></div>
+        <div className="m-auto p-6 border-2 border-solid dark:border-stone-400 rounded-[50%] relative h-40 w-40 dark:bg-stone-900 flex justify-center items-center">
+          <img
+            src={sptImage.src}
+            alt="Standing Power Throw Image"
+            className="h-24"
+          />
+        </div>
       </div>
 
       <div className="w-full md:w-4/6 mx-auto my-16">

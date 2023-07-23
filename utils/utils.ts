@@ -1,5 +1,5 @@
 const data = require("../data/data.json");
-import { Age, Gender, Exercise } from "@/types";
+import { Age, Gender, Exercise, ScoreObject } from "@/types";
 
 export const padTo2Digits = (num: number) => {
   return num.toString().padStart(2, "0");
@@ -52,4 +52,73 @@ export const getScoreIncreasingIsBetter = (
       return "100";
     }
   }
+};
+
+type MinMaxReturn = {
+  mdlMin: ScoreObject;
+  mdlMax: ScoreObject;
+  sptMin: ScoreObject;
+  sptMax: ScoreObject;
+  hrpMin: ScoreObject;
+  hrpMax: ScoreObject;
+  sdcMin: ScoreObject;
+  sdcMax: ScoreObject;
+  plkMin: ScoreObject;
+  plkMax: ScoreObject;
+  tmrMin: ScoreObject;
+  tmrMax: ScoreObject;
+};
+
+export const getMinMaxScores = (gender: Gender, age: Age): MinMaxReturn => {
+  const mdlMin = data.mdl[gender][age].find((score: ScoreObject) => {
+    return score.score === 60;
+  });
+  const mdlMax = data.mdl[gender][age].find((score: ScoreObject) => {
+    return score.score === 100;
+  });
+  const sptMin = data.spt[gender][age].find((score: ScoreObject) => {
+    return score.score === 60;
+  });
+  const sptMax = data.spt[gender][age].find((score: ScoreObject) => {
+    return score.score === 100;
+  });
+  const hrpMin = data.hrp[gender][age].find((score: ScoreObject) => {
+    return score.score === 60;
+  });
+  const hrpMax = data.hrp[gender][age].find((score: ScoreObject) => {
+    return score.score === 100;
+  });
+  const sdcMin = data.sdc[gender][age].find((score: ScoreObject) => {
+    return score.score === 60;
+  });
+  const sdcMax = data.sdc[gender][age].find((score: ScoreObject) => {
+    return score.score === 100;
+  });
+  const plkMin = data.plk[gender][age].find((score: ScoreObject) => {
+    return score.score === 60;
+  });
+  const plkMax = data.plk[gender][age].find((score: ScoreObject) => {
+    return score.score === 100;
+  });
+  const tmrMin = data.tmr[gender][age].find((score: ScoreObject) => {
+    return score.score === 60;
+  });
+  const tmrMax = data.tmr[gender][age].find((score: ScoreObject) => {
+    return score.score === 100;
+  });
+
+  return {
+    mdlMin,
+    mdlMax,
+    sptMin,
+    sptMax,
+    hrpMin,
+    hrpMax,
+    sdcMin,
+    sdcMax,
+    plkMin,
+    plkMax,
+    tmrMin,
+    tmrMax,
+  };
 };

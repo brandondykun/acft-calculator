@@ -1,4 +1,5 @@
 import Iframe from "@/components/Iframe";
+import deadLiftImage from "../../public/deadlift.svg";
 
 const MdlPage = () => {
   return (
@@ -17,7 +18,7 @@ const MdlPage = () => {
         components of fitness assessed by the MDL.
       </p>
 
-      <div className="w-fit mx-auto my-12">
+      <div className="w-fit mx-auto my-20">
         <Iframe
           width="580"
           height="335"
@@ -28,6 +29,13 @@ const MdlPage = () => {
           allowFullScreen
           className="shadow"
         ></Iframe>
+      </div>
+
+      <div className="relative">
+        <div className="h-[1px] dark:bg-stone-400 absolute top-[50%] left-0 right-0 md:left-[15%] md:right-[15%]"></div>
+        <div className="m-auto p-6 border-2 border-solid dark:border-stone-400 rounded-[50%] relative h-40 w-40 dark:bg-stone-900 flex justify-center items-center">
+          <img src={deadLiftImage.src} alt="Dead Lift Image" className="h-24" />
+        </div>
       </div>
 
       <div className="w-full md:w-4/6 mx-auto my-16">

@@ -1,4 +1,5 @@
 import Iframe from "@/components/Iframe";
+import tmrImage from "../../public/run.svg";
 
 const TmrPage = () => {
   return (
@@ -15,7 +16,7 @@ const TmrPage = () => {
         to recover more quickly when executing repetitive physical tasks.
       </p>
 
-      <div className="w-fit mx-auto my-12">
+      <div className="w-fit mx-auto my-20">
         <Iframe
           width="560"
           height="315"
@@ -25,6 +26,17 @@ const TmrPage = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></Iframe>
+      </div>
+
+      <div className="relative">
+        <div className="h-[1px] dark:bg-stone-400 absolute top-[50%] left-0 right-0 md:left-[15%] md:right-[15%]"></div>
+        <div className="m-auto p-6 border-2 border-solid dark:border-stone-400 rounded-[50%] relative h-40 w-40 dark:bg-stone-900 flex justify-center items-center">
+          <img
+            src={tmrImage.src}
+            alt="Two Mile Run Image"
+            className="h-[110px]"
+          />
+        </div>
       </div>
 
       <div className="w-full md:w-4/6 mx-auto my-16">

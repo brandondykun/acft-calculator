@@ -52,9 +52,9 @@ export default function Home() {
     tmrScore >= 60;
 
   return (
-    <main className="min-h-screen dark:bg-stone-950 dark:text-stone-100">
-      <div className="text-2xl p-8 text-amber-400 text-center md:text-left">
-        ACFT Score Calculator
+    <main className="min-h-screen p-4 dark:bg-stone-950 dark:text-stone-100">
+      <div className="text-3xl p-8 text-amber-400 text-center md:text-left">
+        ACFT SCORE CALCULATOR
       </div>
       <div className="max-w-[600px] m-auto p-4">
         <div className="flex justify-between m-auto py-6 gap-4">
