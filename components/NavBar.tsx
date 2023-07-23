@@ -28,7 +28,7 @@ const NavBar = () => {
 
           <NavigationMenuItem>
             <NavigationMenuTrigger>Events</NavigationMenuTrigger>
-            <NavigationMenuContent>
+            <NavigationMenuContent className="w-[230px]">
               <Link href="/mdl" legacyBehavior passHref>
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} w-[200px]`}
