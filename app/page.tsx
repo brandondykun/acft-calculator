@@ -53,18 +53,46 @@ export default function Home() {
 
   return (
     <main className="min-h-screen dark:bg-stone-950 dark:text-stone-100">
-      <div className="text-2xl p-8 text-amber-400">ACFT Score Calculator</div>
+      <div className="text-2xl p-8 text-amber-400 text-center md:text-left">
+        ACFT Score Calculator
+      </div>
       <div className="max-w-[600px] m-auto p-4">
         <div className="flex justify-between m-auto py-6 gap-4">
           <GenderSelect gender={gender} setGender={setGender} />
           <AgeSelect age={age} setAge={setAge} />
         </div>
-        <MdlSlider mdlRaw={mdlRaw} setMdlRaw={setMdlRaw} mdlScore={mdlScore} />
-        <SptSlider sptRaw={sptRaw} setSptRaw={setSptRaw} sptScore={sptScore} />
-        <HrpSlider hrpRaw={hrpRaw} setHrpRaw={setHrpRaw} hrpScore={hrpScore} />
-        <SdcSlider sdcRaw={sdcRaw} setSdcRaw={setSdcRaw} sdcScore={sdcScore} />
-        <PlkSlider plkRaw={plkRaw} setPlkRaw={setPlkRaw} plkScore={plkScore} />
-        <TmrSlider tmrRaw={tmrRaw} setTmrRaw={setTmrRaw} tmrScore={tmrScore} />
+        <div className="px-4 md:px-0">
+          <MdlSlider
+            mdlRaw={mdlRaw}
+            setMdlRaw={setMdlRaw}
+            mdlScore={mdlScore}
+          />
+          <SptSlider
+            sptRaw={sptRaw}
+            setSptRaw={setSptRaw}
+            sptScore={sptScore}
+          />
+          <HrpSlider
+            hrpRaw={hrpRaw}
+            setHrpRaw={setHrpRaw}
+            hrpScore={hrpScore}
+          />
+          <SdcSlider
+            sdcRaw={sdcRaw}
+            setSdcRaw={setSdcRaw}
+            sdcScore={sdcScore}
+          />
+          <PlkSlider
+            plkRaw={plkRaw}
+            setPlkRaw={setPlkRaw}
+            plkScore={plkScore}
+          />
+          <TmrSlider
+            tmrRaw={tmrRaw}
+            setTmrRaw={setTmrRaw}
+            tmrScore={tmrScore}
+          />
+        </div>
         <div className="py-12">
           <div
             className={`${
