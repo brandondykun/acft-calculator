@@ -14,6 +14,9 @@ type Props = {
   plkScore: number;
 };
 
+const MIN_TIME_IN_SECS = 40;
+const MAX_TIME_IN_SECS = 220;
+
 const PlkSlider = ({ plkRaw, setPlkRaw, plkScore }: Props) => {
   return (
     <ExerciseContainer>
@@ -21,11 +24,11 @@ const PlkSlider = ({ plkRaw, setPlkRaw, plkScore }: Props) => {
         <div className="mb-4 text-xl">Plank</div>
         <div className="flex justify-between md:gap-4 md:justify-end">
           <Button
-            disabled={plkRaw === 40}
+            disabled={plkRaw === MIN_TIME_IN_SECS}
             variant="outline"
             onClick={() => {
               setPlkRaw((prev) => {
-                if (prev === 40) {
+                if (prev === MIN_TIME_IN_SECS) {
                   return prev;
                 }
                 return prev - 1;
@@ -35,11 +38,11 @@ const PlkSlider = ({ plkRaw, setPlkRaw, plkScore }: Props) => {
             <Minus size={15} />
           </Button>
           <Button
-            disabled={plkRaw === 220}
+            disabled={plkRaw === MAX_TIME_IN_SECS}
             variant="outline"
             onClick={() => {
               setPlkRaw((prev) => {
-                if (plkRaw === 220) {
+                if (plkRaw === MAX_TIME_IN_SECS) {
                   return prev;
                 }
                 return prev + 1;
@@ -52,17 +55,17 @@ const PlkSlider = ({ plkRaw, setPlkRaw, plkScore }: Props) => {
       </ExerciseTitle>
       <Slider
         defaultValue={[0]}
-        min={40}
-        max={220}
+        min={MIN_TIME_IN_SECS}
+        max={MAX_TIME_IN_SECS}
         step={1}
         value={[plkRaw]}
         onValueChange={(val) => setPlkRaw(val[0])}
       />
       <div className="py-4 flex justify-between text-lg text-stone-500">
         <div>
-          {plkRaw === 40
+          {plkRaw === MIN_TIME_IN_SECS
             ? `< ${secondsToMinutesAndSeconds(plkRaw)}`
-            : plkRaw === 220
+            : plkRaw === MAX_TIME_IN_SECS
             ? `${secondsToMinutesAndSeconds(plkRaw)} +`
             : secondsToMinutesAndSeconds(plkRaw)}
         </div>

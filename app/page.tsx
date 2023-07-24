@@ -21,9 +21,9 @@ export default function Home() {
   const [mdlRaw, setMdlRaw] = useState(0);
   const [sptRaw, setSptRaw] = useState(0);
   const [hrpRaw, setHrpRaw] = useState(0);
-  const [sdcRaw, setSdcRaw] = useState(89);
+  const [sdcRaw, setSdcRaw] = useState(348); // initialize with highest time that equals 0 points
   const [plkRaw, setPlkRaw] = useState(40);
-  const [tmrRaw, setTmrRaw] = useState(801);
+  const [tmrRaw, setTmrRaw] = useState(1620); // initialize with highest time that equals 0 points
 
   // point scores for each event
   const mdlScore = getScoreIncreasingIsBetter(gender, age, "mdl", mdlRaw);
