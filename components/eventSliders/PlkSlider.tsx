@@ -21,11 +21,11 @@ const PlkSlider = ({ plkRaw, setPlkRaw, plkScore }: Props) => {
         <div className="mb-4 text-xl">Plank</div>
         <div className="flex justify-between md:gap-4 md:justify-end">
           <Button
-            disabled={plkRaw === 0}
+            disabled={plkRaw === 40}
             variant="outline"
             onClick={() => {
               setPlkRaw((prev) => {
-                if (prev === 0) {
+                if (prev === 40) {
                   return prev;
                 }
                 return prev - 1;

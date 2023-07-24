@@ -21,8 +21,8 @@ export default function Home() {
   const [mdlRaw, setMdlRaw] = useState(0);
   const [sptRaw, setSptRaw] = useState(0);
   const [hrpRaw, setHrpRaw] = useState(0);
-  const [sdcRaw, setSdcRaw] = useState(0);
-  const [plkRaw, setPlkRaw] = useState(0);
+  const [sdcRaw, setSdcRaw] = useState(89);
+  const [plkRaw, setPlkRaw] = useState(40);
   const [tmrRaw, setTmrRaw] = useState(801);
 
   // point scores for each event

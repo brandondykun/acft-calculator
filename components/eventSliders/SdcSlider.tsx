@@ -21,11 +21,11 @@ const SdcSlider = ({ sdcRaw, setSdcRaw, sdcScore }: Props) => {
         <div className="mb-4 text-xl">Sprint Drag Carry</div>
         <div className="flex justify-between md:gap-4 md:justify-end">
           <Button
-            disabled={sdcRaw === 0}
+            disabled={sdcRaw === 89}
             variant="outline"
             onClick={() => {
               setSdcRaw((prev) => {
-                if (prev === 0) {
+                if (prev === 89) {
                   return prev;
                 }
                 return prev - 1;
