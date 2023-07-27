@@ -25,9 +25,6 @@ const Iframe = ({ ...rest }) => {
   });
 
   useEffect(() => {
-    console.log("IN THE USE EFFECT");
-    console.log("window: ", window);
-
     if (window !== undefined) {
       setWindowExists(true);
       if (window.innerWidth < 400) {
