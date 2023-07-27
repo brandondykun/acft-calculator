@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="text-stone-200 mb-4 hover:cursor-default font-bold">
               TOOLS
             </div>
-            <Link href="/" legacyBehavior passHref>
+            <Link href="/calculator" legacyBehavior passHref>
               <span className="hover:underline hover:cursor-pointer">
                 Calculator
               </span>

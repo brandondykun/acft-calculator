@@ -47,7 +47,7 @@ const NavBar = () => {
       <NavigationMenu className="md:block hidden">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
+            <Link href="/calculator" legacyBehavior passHref>
               <NavigationMenuLink className={`${navigationMenuTriggerStyle()}`}>
                 <span className="w-full text-left">Calculator</span>
               </NavigationMenuLink>
@@ -124,14 +124,14 @@ const NavBar = () => {
               <SheetTitle>Menu</SheetTitle>
             </SheetHeader>
             <div className="text-stone-300 flex flex-col pt-4">
-              <CloseMenuLink href="/home" setOpen={setOpen}>
+              <CloseMenuLink href="/" setOpen={setOpen}>
                 Home
               </CloseMenuLink>
               <div className="flex items-center gap-2 mt-6 mb-2">
                 <div className="text-stone-500 tracking-wider w-fit">TOOLS</div>
                 <div className="h-[1px] bg-stone-500 flex-1"></div>
               </div>
-              <CloseMenuLink href="/" setOpen={setOpen}>
+              <CloseMenuLink href="/calculator" setOpen={setOpen}>
                 Calculator
               </CloseMenuLink>
               <CloseMenuLink href="/min-max" setOpen={setOpen}>
