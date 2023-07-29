@@ -22,6 +22,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 type Props = {
   href: string;
@@ -29,6 +30,7 @@ type Props = {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
+// link for the mobile nav menu that closes the menu automatically when selected
 const CloseMenuLink = ({ href, setOpen, children }: Props) => {
   return (
     <Link href={href} legacyBehavior passHref>
@@ -40,20 +42,14 @@ const CloseMenuLink = ({ href, setOpen, children }: Props) => {
 };
 
 const NavBar = () => {
+  const currentRoute = usePathname();
+
   const [open, setOpen] = useState(false);
 
   return (
     <div className="border-b-stone-900 border-b border-b-solid p-1">
       <NavigationMenu className="md:block hidden">
         <NavigationMenuList>
-          <NavigationMenuItem>
-            <Link href="/calculator" legacyBehavior passHref>
-              <NavigationMenuLink className={`${navigationMenuTriggerStyle()}`}>
-                <span className="w-full text-left">Calculator</span>
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-
           <NavigationMenuItem>
             <NavigationMenuTrigger>Events</NavigationMenuTrigger>
             <NavigationMenuContent className="w-[230px]">
@@ -105,10 +101,31 @@ const NavBar = () => {
               </Link>
             </NavigationMenuContent>
           </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <Link href="/calculator" legacyBehavior passHref>
+              <NavigationMenuLink className={`${navigationMenuTriggerStyle()}`}>
+                <span
+                  className={`w-full ${
+                    currentRoute === "/calculator" ? "text-amber-400" : ""
+                  }`}
+                >
+                  Calculator
+                </span>
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+
           <NavigationMenuItem>
             <Link href="/min-max" legacyBehavior passHref>
               <NavigationMenuLink className={`${navigationMenuTriggerStyle()}`}>
-                <span className="w-full text-left">Min/Max</span>
+                <span
+                  className={`w-full ${
+                    currentRoute === "/min-max" ? "text-amber-400" : ""
+                  }`}
+                >
+                  Min/Max
+                </span>
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -123,13 +140,15 @@ const NavBar = () => {
             <SheetHeader>
               <SheetTitle>Menu</SheetTitle>
             </SheetHeader>
-            <div className="text-stone-300 flex flex-col pt-4">
+            <div className="text-stone-400 flex flex-col pt-4">
               <CloseMenuLink href="/" setOpen={setOpen}>
                 Home
               </CloseMenuLink>
               <div className="flex items-center gap-2 mt-6 mb-2">
-                <div className="text-stone-500 tracking-wider w-fit">TOOLS</div>
-                <div className="h-[1px] bg-stone-500 flex-1"></div>
+                <div className="text-stone-300 tracking-wider w-fit font-bold">
+                  TOOLS
+                </div>
+                <div className="h-[1px] bg-stone-300 flex-1"></div>
               </div>
               <CloseMenuLink href="/calculator" setOpen={setOpen}>
                 Calculator
@@ -138,10 +157,10 @@ const NavBar = () => {
                 Min/Max
               </CloseMenuLink>
               <div className="flex items-center gap-2 mt-6 mb-2">
-                <div className="text-stone-500 tracking-wider w-fit">
+                <div className="text-stone-300 tracking-wider w-fit font-bold">
                   EVENTS
                 </div>
-                <div className="h-[1px] bg-stone-500 flex-1"></div>
+                <div className="h-[1px] bg-stone-300 flex-1"></div>
               </div>
               <CloseMenuLink href="/mdl" setOpen={setOpen}>
                 Max Dead Lift
