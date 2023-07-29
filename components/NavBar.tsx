@@ -51,7 +51,7 @@ const NavBar = () => {
       <NavigationMenu className="md:block hidden">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href="/calculator" legacyBehavior passHref>
+            <Link href="/" legacyBehavior passHref>
               <NavigationMenuLink className={`${navigationMenuTriggerStyle()}`}>
                 <span
                   className={`w-full ${
