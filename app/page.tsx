@@ -15,7 +15,7 @@ const LandingPage = () => {
             No BS. Only what you need. Nothing you don't.
           </p>
           <div className="flex flex-col xs:flex-row gap-4 text-center">
-            <Link href="/">
+            <Link href="/calculator">
               <Button variant="gold" className="w-[140px]">
                 Calculate Score
               </Button>

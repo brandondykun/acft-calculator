@@ -34,7 +34,10 @@ type Props = {
 const CloseMenuLink = ({ href, setOpen, children }: Props) => {
   return (
     <Link href={href} legacyBehavior passHref>
-      <span onClick={() => setOpen(false)} className="text-xl py-1 underline">
+      <span
+        onClick={() => setOpen(false)}
+        className="text-xl py-1 underline hover:cursor-pointer w-fit"
+      >
         {children}
       </span>
     </Link>
