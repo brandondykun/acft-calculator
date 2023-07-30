@@ -98,10 +98,14 @@ export default function Calculator() {
             className={`${
               scorePassing ? "text-green-600" : "text-red-600"
             } text-2xl text-center pb-6`}
+            id="result-text"
           >
             {scorePassing ? "Meets Standard" : "Does Not Meet Standard"}
           </div>
-          <div className="text-2xl text-stone-100 text-center">{`${totalScore} / 600`}</div>
+          <div
+            className="text-2xl text-stone-100 text-center"
+            id="result-score"
+          >{`${totalScore} / 600`}</div>
         </div>
       </div>
     </main>

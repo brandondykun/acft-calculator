@@ -17,7 +17,7 @@ type Props = {
 
 const AgeSelect = ({ age, setAge }: Props) => {
   return (
-    <div className="w-[180px]">
+    <div className="w-[180px]" data-testid="age-input">
       <div className="mb-2 pl-1 text-stone-300">
         <Label htmlFor="age-input">Age</Label>
       </div>

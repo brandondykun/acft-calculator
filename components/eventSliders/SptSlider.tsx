@@ -18,11 +18,12 @@ const MAX_DISTANCE = 13.1;
 
 const SptSlider = ({ sptRaw, setSptRaw, sptScore }: Props) => {
   return (
-    <ExerciseContainer>
+    <ExerciseContainer id="spt-slider">
       <ExerciseTitle>
         <div className="mb-4 text-xl">Standing Power Throw</div>
         <div className="flex justify-between md:gap-4 md:justify-end">
           <Button
+            data-testid="spt-minus-button"
             disabled={sptRaw === MIN_DISTANCE}
             variant="outline"
             onClick={() => {
@@ -37,6 +38,7 @@ const SptSlider = ({ sptRaw, setSptRaw, sptScore }: Props) => {
             <Minus size={15} />
           </Button>
           <Button
+            data-testid="spt-add-button"
             disabled={sptRaw === MAX_DISTANCE}
             variant="outline"
             onClick={() => {
@@ -61,8 +63,10 @@ const SptSlider = ({ sptRaw, setSptRaw, sptScore }: Props) => {
         onValueChange={(val) => setSptRaw(val[0])}
       />
       <div className="py-4 flex justify-between text-lg text-stone-500">
-        <div>{sptRaw === MAX_DISTANCE ? `${sptRaw} m +` : `${sptRaw} m`}</div>
-        <ScoreContainer score={sptScore} />
+        <div data-testid="spt-raw">
+          {sptRaw === MAX_DISTANCE ? `${sptRaw} m +` : `${sptRaw} m`}
+        </div>
+        <ScoreContainer score={sptScore} id="spt-score" />
       </div>
     </ExerciseContainer>
   );

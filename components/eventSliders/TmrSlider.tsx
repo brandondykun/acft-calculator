@@ -19,11 +19,12 @@ const MAX_TIME_IN_SECS = 1620;
 
 const TmrSlider = ({ tmrRaw, setTmrRaw, tmrScore }: Props) => {
   return (
-    <ExerciseContainer>
+    <ExerciseContainer id="tmr-slider">
       <ExerciseTitle>
         <div className="mb-4 text-xl">Two Mile Run</div>
         <div className="flex justify-between md:gap-4 md:justify-end">
           <Button
+            data-testid="tmr-minus-button"
             disabled={tmrRaw === MIN_TIME_IN_SECS}
             variant="outline"
             onClick={() => {
@@ -38,6 +39,7 @@ const TmrSlider = ({ tmrRaw, setTmrRaw, tmrScore }: Props) => {
             <Minus size={15} />
           </Button>
           <Button
+            data-testid="tmr-add-button"
             disabled={tmrRaw === MAX_TIME_IN_SECS}
             variant="outline"
             onClick={() => {
@@ -62,7 +64,7 @@ const TmrSlider = ({ tmrRaw, setTmrRaw, tmrScore }: Props) => {
         onValueChange={(val) => setTmrRaw(val[0])}
       />
       <div className="py-4 flex justify-between text-lg text-stone-500">
-        <div>
+        <div data-testid="tmr-raw">
           {tmrRaw === MIN_TIME_IN_SECS
             ? `< ${secondsToMinutesAndSeconds(tmrRaw)}`
             : tmrRaw === MAX_TIME_IN_SECS
@@ -70,7 +72,7 @@ const TmrSlider = ({ tmrRaw, setTmrRaw, tmrScore }: Props) => {
             : secondsToMinutesAndSeconds(tmrRaw)}
         </div>
 
-        <ScoreContainer score={tmrScore} />
+        <ScoreContainer score={tmrScore} id="tmr-score" />
       </div>
     </ExerciseContainer>
   );

@@ -17,7 +17,7 @@ type Props = {
 
 const GenderSelect = ({ gender, setGender }: Props) => {
   return (
-    <div className="w-[180px]">
+    <div className="w-[180px]" data-testid="gender-input">
       <div className="mb-2 pl-1 text-stone-300">
         <Label htmlFor="gender-input">Gender</Label>
       </div>

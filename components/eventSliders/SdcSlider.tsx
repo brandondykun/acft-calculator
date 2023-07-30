@@ -19,11 +19,12 @@ const MAX_TIME_IN_SECS = 348;
 
 const SdcSlider = ({ sdcRaw, setSdcRaw, sdcScore }: Props) => {
   return (
-    <ExerciseContainer>
+    <ExerciseContainer id="sdc-slider">
       <ExerciseTitle>
         <div className="mb-4 text-xl">Sprint Drag Carry</div>
         <div className="flex justify-between md:gap-4 md:justify-end">
           <Button
+            data-testid="sdc-minus-button"
             disabled={sdcRaw === MIN_TIME_IN_SECS}
             variant="outline"
             onClick={() => {
@@ -38,6 +39,7 @@ const SdcSlider = ({ sdcRaw, setSdcRaw, sdcScore }: Props) => {
             <Minus size={15} />
           </Button>
           <Button
+            data-testid="sdc-add-button"
             disabled={sdcRaw === MAX_TIME_IN_SECS}
             variant="outline"
             onClick={() => {
@@ -62,14 +64,14 @@ const SdcSlider = ({ sdcRaw, setSdcRaw, sdcScore }: Props) => {
         onValueChange={(val) => setSdcRaw(val[0])}
       />
       <div className="py-4 flex justify-between text-lg text-stone-500">
-        <div>
+        <div data-testid="sdc-raw">
           {sdcRaw === MIN_TIME_IN_SECS
             ? `< ${secondsToMinutesAndSeconds(sdcRaw)}`
             : sdcRaw === MAX_TIME_IN_SECS
             ? `${secondsToMinutesAndSeconds(sdcRaw)} +`
             : secondsToMinutesAndSeconds(sdcRaw)}
         </div>
-        <ScoreContainer score={sdcScore} />
+        <ScoreContainer score={sdcScore} id="sdc-score" />
       </div>
     </ExerciseContainer>
   );

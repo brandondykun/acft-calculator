@@ -18,11 +18,12 @@ const MAX_SCORE = 62;
 
 const HrpSlider = ({ hrpRaw, setHrpRaw, hrpScore }: Props) => {
   return (
-    <ExerciseContainer>
+    <ExerciseContainer id="hrp-slider">
       <ExerciseTitle>
         <div className="mb-4 text-xl">Hand Release Pushup</div>
         <div className="flex justify-between md:gap-4 md:justify-end">
           <Button
+            data-testid="hrp-minus-button"
             disabled={hrpRaw === MIN_SCORE}
             variant="outline"
             onClick={() => {
@@ -37,6 +38,7 @@ const HrpSlider = ({ hrpRaw, setHrpRaw, hrpScore }: Props) => {
             <Minus size={15} />
           </Button>
           <Button
+            data-testid="hrp-add-button"
             disabled={hrpRaw === MAX_SCORE}
             variant="outline"
             onClick={() => {
@@ -61,8 +63,10 @@ const HrpSlider = ({ hrpRaw, setHrpRaw, hrpScore }: Props) => {
         onValueChange={(val) => setHrpRaw(val[0])}
       />
       <div className="py-4 flex justify-between text-lg text-stone-500">
-        <div>{hrpRaw === 62 ? `${hrpRaw} reps +` : `${hrpRaw} reps`}</div>
-        <ScoreContainer score={hrpScore} />
+        <div data-testid="hrp-raw">
+          {hrpRaw === 62 ? `${hrpRaw} reps +` : `${hrpRaw} reps`}
+        </div>
+        <ScoreContainer score={hrpScore} id="hrp-score" />
       </div>
     </ExerciseContainer>
   );

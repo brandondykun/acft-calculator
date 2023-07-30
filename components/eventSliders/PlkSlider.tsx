@@ -19,11 +19,12 @@ const MAX_TIME_IN_SECS = 220;
 
 const PlkSlider = ({ plkRaw, setPlkRaw, plkScore }: Props) => {
   return (
-    <ExerciseContainer>
+    <ExerciseContainer id="plk-slider">
       <ExerciseTitle>
         <div className="mb-4 text-xl">Plank</div>
         <div className="flex justify-between md:gap-4 md:justify-end">
           <Button
+            data-testid="plk-minus-button"
             disabled={plkRaw === MIN_TIME_IN_SECS}
             variant="outline"
             onClick={() => {
@@ -38,6 +39,7 @@ const PlkSlider = ({ plkRaw, setPlkRaw, plkScore }: Props) => {
             <Minus size={15} />
           </Button>
           <Button
+            data-testid="plk-add-button"
             disabled={plkRaw === MAX_TIME_IN_SECS}
             variant="outline"
             onClick={() => {
@@ -62,14 +64,14 @@ const PlkSlider = ({ plkRaw, setPlkRaw, plkScore }: Props) => {
         onValueChange={(val) => setPlkRaw(val[0])}
       />
       <div className="py-4 flex justify-between text-lg text-stone-500">
-        <div>
+        <div data-testid="plk-raw">
           {plkRaw === MIN_TIME_IN_SECS
             ? `< ${secondsToMinutesAndSeconds(plkRaw)}`
             : plkRaw === MAX_TIME_IN_SECS
             ? `${secondsToMinutesAndSeconds(plkRaw)} +`
             : secondsToMinutesAndSeconds(plkRaw)}
         </div>
-        <ScoreContainer score={plkScore} />
+        <ScoreContainer score={plkScore} id="plk-score" />
       </div>
     </ExerciseContainer>
   );

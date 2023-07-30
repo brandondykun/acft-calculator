@@ -18,11 +18,12 @@ const MAX_WEIGHT = 340;
 
 const MdlSlider = ({ mdlRaw, setMdlRaw, mdlScore }: Props) => {
   return (
-    <ExerciseContainer>
+    <ExerciseContainer id="mdl-slider">
       <ExerciseTitle>
         <div className="mb-4 text-xl">Max Dead Lift</div>
         <div className="flex justify-between md:gap-4 md:justify-end">
           <Button
+            data-testid="mdl-minus-button"
             disabled={mdlRaw === MIN_WEIGHT}
             variant="outline"
             onClick={() => {
@@ -37,6 +38,7 @@ const MdlSlider = ({ mdlRaw, setMdlRaw, mdlScore }: Props) => {
             <Minus size={15} />
           </Button>
           <Button
+            data-testid="mdl-add-button"
             disabled={mdlRaw === MAX_WEIGHT}
             variant="outline"
             onClick={() => {
@@ -61,8 +63,10 @@ const MdlSlider = ({ mdlRaw, setMdlRaw, mdlScore }: Props) => {
         onValueChange={(val) => setMdlRaw(val[0])}
       />
       <div className="py-4 flex justify-between text-lg text-stone-500">
-        <div>{mdlRaw === MAX_WEIGHT ? `${mdlRaw} lbs +` : `${mdlRaw} lbs`}</div>
-        <ScoreContainer score={mdlScore} />
+        <div data-testid="mdl-raw">
+          {mdlRaw === MAX_WEIGHT ? `${mdlRaw} lbs +` : `${mdlRaw} lbs`}
+        </div>
+        <ScoreContainer score={mdlScore} id="mdl-score" />
       </div>
     </ExerciseContainer>
   );
