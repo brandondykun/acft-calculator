@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-stone-900 border-t border-t-stone-800 border-solid text-stone-400 px-4 py-8 md:px-6 bg-opacity-70">
       <div className="lg:flex justify-between max-w-4xl m-auto">
         <div className="text-stone-500 text-xl flex flex-col xs:items-center justify-center mb-8 lg:mb-0 flex-1">
-          <div>ACFT CALCULATOR</div>
+          <div>ARMY ACFT CALCULATOR</div>
         </div>
         <div className="xs:flex justify-center gap-12 flex-2">
           <div className="flex flex-col">
