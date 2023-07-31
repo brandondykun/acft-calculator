@@ -23,13 +23,13 @@ export const getScoreDecreasingIsBetter = (
   const exerciseData = data[exercise][gender][age];
   for (let i = 0; i < exerciseData.length; i++) {
     if (exerciseData[0].raw < raw) {
-      return "0";
+      return 0;
     } else if (exerciseData[i].raw === raw) {
       return exerciseData[i].score;
     } else if (exerciseData[i].raw < raw) {
       return exerciseData[i - 1]?.score;
     } else if (exerciseData[exerciseData.length - 1].raw > raw) {
-      return "100";
+      return 100;
     }
   }
 };
@@ -43,13 +43,13 @@ export const getScoreIncreasingIsBetter = (
   const exerciseData = data[exercise][gender][age];
   for (let i = 0; i < exerciseData.length; i++) {
     if (exerciseData[0].raw > raw) {
-      return "0";
+      return 0;
     } else if (exerciseData[i].raw === raw) {
       return exerciseData[i].score;
     } else if (exerciseData[i].raw > raw) {
       return exerciseData[i - 1]?.score;
     } else if (exerciseData[exerciseData.length - 1].raw < raw) {
-      return "100";
+      return 100;
     }
   }
 };
