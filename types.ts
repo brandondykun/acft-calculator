@@ -45,3 +45,8 @@ export type Age =
   | "52"
   | "57"
   | "62";
+
+export type TestScore = {
+  raw: number;
+  score: number;
+};

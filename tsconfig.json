@@ -20,8 +20,10 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": ["./*"],
+      "@utils/*": ["utils/utils/*"] // This mapping is relative to "baseUrl".
+    },
+    "baseUrl": "." // This must be specified if "paths" is.
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
