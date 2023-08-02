@@ -2,9 +2,9 @@ import { test, expect } from "@playwright/test";
 import data from "../../data/data.json";
 
 /**
- * DATA VALIDATION TESTS
+ * TWO MILE RUN DATA VALIDATION TESTS
  *
- * These tests validate the completeness of the data used to score the ACFT.
+ * These tests validate the completeness of the TMR data used to score the ACFT.
  */
 
 // Both genders and all age groups should have 101 scoring intervals for the Two Mile Run

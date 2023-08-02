@@ -8,6 +8,12 @@ import { TestScore } from "@/types";
  * These are tests for calculating the Standing Power Throw scores from the raw performance values.
  */
 
+/**
+ *
+ * MALE SCORES
+ *
+ */
+
 // scores for males age 17-21 for SPT
 const male17Spt: TestScore[] = [
   { score: 0, raw: 4 },
@@ -79,14 +85,626 @@ const male17Spt: TestScore[] = [
   { score: 100, raw: 12.9 }, // edge case
 ];
 
-test("SPT Scores are calculated correctly for males age 17-21", async ({
-  page,
-}) => {
+test("SPT Scores are calculated correctly for males age 17-21", async () => {
   male17Spt.forEach((s) => {
     const score = getScoreIncreasingIsBetter("male", "17", "spt", s.raw);
     expect(score).toEqual(s.score);
   });
 });
+
+// scores for males age 22-26 for SPT
+const male22Spt: TestScore[] = [
+  { score: 0, raw: 4.2 },
+  { score: 2, raw: 4.3 },
+  { score: 4, raw: 4.4 },
+  { score: 6, raw: 4.5 },
+  { score: 8, raw: 4.6 },
+  { score: 10, raw: 4.7 },
+  { score: 12, raw: 4.8 },
+  { score: 14, raw: 4.9 },
+  { score: 16, raw: 5 },
+  { score: 18, raw: 5.1 },
+  { score: 21, raw: 5.2 },
+  { score: 23, raw: 5.3 },
+  { score: 26, raw: 5.4 },
+  { score: 28, raw: 5.5 },
+  { score: 31, raw: 5.6 },
+  { score: 33, raw: 5.7 },
+  { score: 36, raw: 5.8 },
+  { score: 38, raw: 5.9 },
+  { score: 44, raw: 6 },
+  { score: 52, raw: 6.1 },
+  { score: 57, raw: 6.2 },
+  { score: 60, raw: 6.3 },
+  { score: 61, raw: 6.9 },
+  { score: 62, raw: 7.3 },
+  { score: 63, raw: 7.5 },
+  { score: 64, raw: 7.7 },
+  { score: 65, raw: 7.8 },
+  { score: 66, raw: 8.1 },
+  { score: 67, raw: 8.2 },
+  { score: 68, raw: 8.3 },
+  { score: 69, raw: 8.5 },
+  { score: 70, raw: 8.6 },
+  { score: 71, raw: 8.8 },
+  { score: 72, raw: 8.9 },
+  { score: 73, raw: 9 },
+  { score: 74, raw: 9.1 },
+  { score: 75, raw: 9.2 },
+  { score: 76, raw: 9.3 },
+  { score: 77, raw: 9.4 },
+  { score: 78, raw: 9.5 },
+  { score: 79, raw: 9.6 },
+  { score: 80, raw: 9.7 },
+  { score: 81, raw: 9.8 },
+  { score: 82, raw: 9.9 },
+  { score: 83, raw: 10 },
+  { score: 84, raw: 10.1 },
+  { score: 85, raw: 10.2 },
+  { score: 86, raw: 10.3 },
+  { score: 87, raw: 10.4 },
+  { score: 88, raw: 10.6 },
+  { score: 89, raw: 10.7 },
+  { score: 90, raw: 11 },
+  { score: 91, raw: 11.1 },
+  { score: 92, raw: 11.3 },
+  { score: 93, raw: 11.4 },
+  { score: 94, raw: 11.5 },
+  { score: 95, raw: 11.8 },
+  { score: 96, raw: 12 },
+  { score: 97, raw: 12.2 },
+  { score: 98, raw: 12.5 },
+  { score: 99, raw: 12.9 },
+  { score: 100, raw: 13 },
+];
+
+test("SPT Scores are calculated correctly for males age 22-26", async () => {
+  male22Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("male", "22", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for males age 27-31 for SPT
+const male27Spt: TestScore[] = [
+  { score: 0, raw: 4.3 },
+  { score: 2, raw: 4.4 },
+  { score: 4, raw: 4.5 },
+  { score: 6, raw: 4.6 },
+  { score: 8, raw: 4.7 },
+  { score: 10, raw: 4.8 },
+  { score: 12, raw: 4.9 },
+  { score: 14, raw: 5 },
+  { score: 15, raw: 5.1 },
+  { score: 17, raw: 5.2 },
+  { score: 19, raw: 5.3 },
+  { score: 21, raw: 5.4 },
+  { score: 23, raw: 5.5 },
+  { score: 26, raw: 5.6 },
+  { score: 28, raw: 5.7 },
+  { score: 32, raw: 5.8 },
+  { score: 37, raw: 5.9 },
+  { score: 41, raw: 6 },
+  { score: 44, raw: 6.1 },
+  { score: 48, raw: 6.2 },
+  { score: 52, raw: 6.3 },
+  { score: 57, raw: 6.4 },
+  { score: 60, raw: 6.5 },
+  { score: 61, raw: 7.1 },
+  { score: 62, raw: 7.5 },
+  { score: 63, raw: 7.7 },
+  { score: 64, raw: 7.9 },
+  { score: 65, raw: 8.1 },
+  { score: 66, raw: 8.3 },
+  { score: 67, raw: 8.4 },
+  { score: 68, raw: 8.5 },
+  { score: 69, raw: 8.6 },
+  { score: 70, raw: 8.8 },
+  { score: 71, raw: 8.9 },
+  { score: 72, raw: 9 },
+  { score: 73, raw: 9.2 },
+  { score: 75, raw: 9.3 },
+  { score: 76, raw: 9.4 },
+  { score: 77, raw: 9.6 },
+  { score: 78, raw: 9.7 },
+  { score: 80, raw: 9.8 },
+  { score: 81, raw: 10 },
+  { score: 82, raw: 10.1 },
+  { score: 83, raw: 10.2 },
+  { score: 84, raw: 10.4 },
+  { score: 85, raw: 10.5 },
+  { score: 86, raw: 10.6 },
+  { score: 87, raw: 10.7 },
+  { score: 88, raw: 10.9 },
+  { score: 89, raw: 11 },
+  { score: 90, raw: 11.1 },
+  { score: 91, raw: 11.3 },
+  { score: 92, raw: 11.4 },
+  { score: 93, raw: 11.6 },
+  { score: 94, raw: 11.7 },
+  { score: 95, raw: 12 },
+  { score: 96, raw: 12.2 },
+  { score: 97, raw: 12.4 },
+  { score: 98, raw: 12.6 },
+  { score: 99, raw: 12.9 },
+  { score: 100, raw: 13.1 },
+];
+
+test("SPT Scores are calculated correctly for males age 27-31", async () => {
+  male27Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("male", "27", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for males age 32-36 for SPT
+const male32Spt: TestScore[] = [
+  { score: 0, raw: 4.4 },
+  { score: 2, raw: 4.5 },
+  { score: 4, raw: 4.6 },
+  { score: 6, raw: 4.7 },
+  { score: 8, raw: 4.8 },
+  { score: 10, raw: 4.9 },
+  { score: 12, raw: 5 },
+  { score: 14, raw: 5.1 },
+  { score: 16, raw: 5.2 },
+  { score: 18, raw: 5.3 },
+  { score: 20, raw: 5.4 },
+  { score: 22, raw: 5.5 },
+  { score: 24, raw: 5.6 },
+  { score: 26, raw: 5.7 },
+  { score: 28, raw: 5.8 },
+  { score: 32, raw: 5.9 },
+  { score: 37, raw: 6 },
+  { score: 42, raw: 6.1 },
+  { score: 47, raw: 6.2 },
+  { score: 52, raw: 6.3 },
+  { score: 57, raw: 6.4 },
+  { score: 60, raw: 6.5 },
+  { score: 61, raw: 7.1 },
+  { score: 62, raw: 7.4 },
+  { score: 63, raw: 7.6 },
+  { score: 64, raw: 7.9 },
+  { score: 65, raw: 8.1 },
+  { score: 66, raw: 8.2 },
+  { score: 67, raw: 8.3 },
+  { score: 68, raw: 8.5 },
+  { score: 69, raw: 8.6 },
+  { score: 70, raw: 8.7 },
+  { score: 71, raw: 8.8 },
+  { score: 72, raw: 8.9 },
+  { score: 73, raw: 9.1 },
+  { score: 74, raw: 9.2 },
+  { score: 75, raw: 9.3 },
+  { score: 76, raw: 9.4 },
+  { score: 77, raw: 9.5 },
+  { score: 78, raw: 9.6 },
+  { score: 79, raw: 9.7 },
+  { score: 80, raw: 9.8 },
+  { score: 81, raw: 9.9 },
+  { score: 82, raw: 10 },
+  { score: 83, raw: 10.1 },
+  { score: 84, raw: 10.2 },
+  { score: 85, raw: 10.3 },
+  { score: 86, raw: 10.4 },
+  { score: 87, raw: 10.5 },
+  { score: 88, raw: 10.7 },
+  { score: 89, raw: 10.8 },
+  { score: 90, raw: 11 },
+  { score: 91, raw: 11.2 },
+  { score: 92, raw: 11.3 },
+  { score: 93, raw: 11.4 },
+  { score: 94, raw: 11.6 },
+  { score: 95, raw: 11.8 },
+  { score: 96, raw: 12 },
+  { score: 97, raw: 12.2 },
+  { score: 98, raw: 12.4 },
+  { score: 99, raw: 12.6 },
+  { score: 100, raw: 12.9 },
+];
+
+test("SPT Scores are calculated correctly for males age 32-36", async () => {
+  male32Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("male", "32", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for males age 37-41 for SPT
+const male37Spt: TestScore[] = [
+  { score: 0, raw: 4.4 },
+  { score: 2, raw: 4.5 },
+  { score: 4, raw: 4.6 },
+  { score: 6, raw: 4.7 },
+  { score: 8, raw: 4.8 },
+  { score: 10, raw: 4.9 },
+  { score: 12, raw: 5 },
+  { score: 14, raw: 5.1 },
+  { score: 16, raw: 5.2 },
+  { score: 18, raw: 5.3 },
+  { score: 21, raw: 5.4 },
+  { score: 23, raw: 5.5 },
+  { score: 26, raw: 5.6 },
+  { score: 28, raw: 5.7 },
+  { score: 32, raw: 5.8 },
+  { score: 37, raw: 5.9 },
+  { score: 42, raw: 6 },
+  { score: 47, raw: 6.1 },
+  { score: 52, raw: 6.2 },
+  { score: 57, raw: 6.3 },
+  { score: 60, raw: 6.4 },
+  { score: 61, raw: 7 },
+  { score: 62, raw: 7.3 },
+  { score: 63, raw: 7.5 },
+  { score: 64, raw: 7.7 },
+  { score: 65, raw: 7.8 },
+  { score: 66, raw: 8.1 },
+  { score: 67, raw: 8.2 },
+  { score: 68, raw: 8.3 },
+  { score: 69, raw: 8.5 },
+  { score: 70, raw: 8.6 },
+  { score: 71, raw: 8.7 },
+  { score: 72, raw: 8.8 },
+  { score: 73, raw: 8.9 },
+  { score: 74, raw: 9 },
+  { score: 75, raw: 9.1 },
+  { score: 76, raw: 9.2 },
+  { score: 77, raw: 9.3 },
+  { score: 78, raw: 9.4 },
+  { score: 79, raw: 9.5 },
+  { score: 80, raw: 9.6 },
+  { score: 81, raw: 9.7 },
+  { score: 82, raw: 9.8 },
+  { score: 83, raw: 9.9 },
+  { score: 84, raw: 10.1 },
+  { score: 85, raw: 10.2 },
+  { score: 86, raw: 10.3 },
+  { score: 87, raw: 10.4 },
+  { score: 88, raw: 10.5 },
+  { score: 89, raw: 10.6 },
+  { score: 90, raw: 10.7 },
+  { score: 91, raw: 10.9 },
+  { score: 92, raw: 11.1 },
+  { score: 93, raw: 11.2 },
+  { score: 94, raw: 11.4 },
+  { score: 95, raw: 11.6 },
+  { score: 96, raw: 11.8 },
+  { score: 97, raw: 12 },
+  { score: 98, raw: 12.2 },
+  { score: 99, raw: 12.6 },
+  { score: 100, raw: 12.8 },
+];
+
+test("SPT Scores are calculated correctly for males age 37-41", async () => {
+  male37Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("male", "37", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for males age 42-46 for SPT
+const male42Spt: TestScore[] = [
+  { score: 0, raw: 4.3 },
+  { score: 2, raw: 4.4 },
+  { score: 4, raw: 4.5 },
+  { score: 6, raw: 4.6 },
+  { score: 8, raw: 4.7 },
+  { score: 11, raw: 4.8 },
+  { score: 14, raw: 4.9 },
+  { score: 18, raw: 5 },
+  { score: 21, raw: 5.1 },
+  { score: 23, raw: 5.2 },
+  { score: 26, raw: 5.3 },
+  { score: 28, raw: 5.4 },
+  { score: 31, raw: 5.5 },
+  { score: 33, raw: 5.6 },
+  { score: 36, raw: 5.7 },
+  { score: 38, raw: 5.8 },
+  { score: 44, raw: 5.9 },
+  { score: 52, raw: 6 },
+  { score: 57, raw: 6.1 },
+  { score: 60, raw: 6.2 },
+  { score: 61, raw: 6.7 },
+  { score: 62, raw: 7.1 },
+  { score: 63, raw: 7.3 },
+  { score: 64, raw: 7.4 },
+  { score: 65, raw: 7.6 },
+  { score: 66, raw: 7.8 },
+  { score: 67, raw: 7.9 },
+  { score: 68, raw: 8 },
+  { score: 69, raw: 8.1 },
+  { score: 70, raw: 8.2 },
+  { score: 71, raw: 8.3 },
+  { score: 72, raw: 8.4 },
+  { score: 73, raw: 8.6 },
+  { score: 75, raw: 8.7 },
+  { score: 76, raw: 8.8 },
+  { score: 77, raw: 8.9 },
+  { score: 78, raw: 9 },
+  { score: 79, raw: 9.1 },
+  { score: 80, raw: 9.2 },
+  { score: 81, raw: 9.3 },
+  { score: 82, raw: 9.4 },
+  { score: 83, raw: 9.5 },
+  { score: 84, raw: 9.6 },
+  { score: 85, raw: 9.7 },
+  { score: 86, raw: 9.8 },
+  { score: 87, raw: 9.9 },
+  { score: 88, raw: 10.1 },
+  { score: 89, raw: 10.3 },
+  { score: 90, raw: 10.4 },
+  { score: 91, raw: 10.5 },
+  { score: 92, raw: 10.6 },
+  { score: 93, raw: 10.7 },
+  { score: 94, raw: 10.8 },
+  { score: 95, raw: 11.1 },
+  { score: 96, raw: 11.3 },
+  { score: 97, raw: 11.4 },
+  { score: 98, raw: 11.7 },
+  { score: 99, raw: 12.1 },
+  { score: 100, raw: 12.3 },
+];
+
+test("SPT Scores are calculated correctly for males age 42-46", async () => {
+  male42Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("male", "42", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for males age 47-51 for SPT
+const male47Spt: TestScore[] = [
+  { score: 0, raw: 4.1 },
+  { score: 2, raw: 4.2 },
+  { score: 4, raw: 4.3 },
+  { score: 6, raw: 4.4 },
+  { score: 8, raw: 4.5 },
+  { score: 11, raw: 4.6 },
+  { score: 13, raw: 4.7 },
+  { score: 16, raw: 4.8 },
+  { score: 18, raw: 4.9 },
+  { score: 21, raw: 5 },
+  { score: 23, raw: 5.1 },
+  { score: 26, raw: 5.2 },
+  { score: 28, raw: 5.3 },
+  { score: 32, raw: 5.4 },
+  { score: 37, raw: 5.5 },
+  { score: 42, raw: 5.6 },
+  { score: 47, raw: 5.7 },
+  { score: 52, raw: 5.8 },
+  { score: 57, raw: 5.9 },
+  { score: 60, raw: 6 },
+  { score: 61, raw: 6.4 },
+  { score: 62, raw: 6.7 },
+  { score: 63, raw: 6.9 },
+  { score: 64, raw: 7.1 },
+  { score: 65, raw: 7.2 },
+  { score: 66, raw: 7.4 },
+  { score: 67, raw: 7.5 },
+  { score: 68, raw: 7.6 },
+  { score: 69, raw: 7.7 },
+  { score: 70, raw: 7.9 },
+  { score: 71, raw: 8 },
+  { score: 72, raw: 8.1 },
+  { score: 74, raw: 8.2 },
+  { score: 75, raw: 8.3 },
+  { score: 76, raw: 8.4 },
+  { score: 77, raw: 8.5 },
+  { score: 78, raw: 8.6 },
+  { score: 80, raw: 8.7 },
+  { score: 81, raw: 8.8 },
+  { score: 82, raw: 8.9 },
+  { score: 83, raw: 9 },
+  { score: 84, raw: 9.1 },
+  { score: 85, raw: 9.2 },
+  { score: 86, raw: 9.3 },
+  { score: 87, raw: 9.4 },
+  { score: 88, raw: 9.5 },
+  { score: 89, raw: 9.6 },
+  { score: 90, raw: 9.7 },
+  { score: 91, raw: 9.9 },
+  { score: 92, raw: 10 },
+  { score: 93, raw: 10.1 },
+  { score: 94, raw: 10.2 },
+  { score: 95, raw: 10.4 },
+  { score: 96, raw: 10.6 },
+  { score: 97, raw: 10.7 },
+  { score: 98, raw: 11 },
+  { score: 99, raw: 11.4 },
+  { score: 100, raw: 11.6 },
+];
+
+test("SPT Scores are calculated correctly for males age 47-51", async () => {
+  male47Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("male", "47", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for males age 52-56 for SPT
+const male52Spt: TestScore[] = [
+  { score: 0, raw: 4 },
+  { score: 2, raw: 4.1 },
+  { score: 4, raw: 4.2 },
+  { score: 6, raw: 4.3 },
+  { score: 8, raw: 4.4 },
+  { score: 11, raw: 4.5 },
+  { score: 13, raw: 4.6 },
+  { score: 16, raw: 4.7 },
+  { score: 18, raw: 4.8 },
+  { score: 24, raw: 4.9 },
+  { score: 31, raw: 5 },
+  { score: 34, raw: 5.1 },
+  { score: 38, raw: 5.2 },
+  { score: 42, raw: 5.3 },
+  { score: 47, raw: 5.4 },
+  { score: 52, raw: 5.5 },
+  { score: 57, raw: 5.6 },
+  { score: 60, raw: 5.7 },
+  { score: 61, raw: 6 },
+  { score: 62, raw: 6.2 },
+  { score: 63, raw: 6.4 },
+  { score: 64, raw: 6.6 },
+  { score: 65, raw: 6.7 },
+  { score: 66, raw: 6.9 },
+  { score: 68, raw: 7 },
+  { score: 69, raw: 7.1 },
+  { score: 70, raw: 7.3 },
+  { score: 71, raw: 7.4 },
+  { score: 72, raw: 7.5 },
+  { score: 73, raw: 7.6 },
+  { score: 74, raw: 7.7 },
+  { score: 76, raw: 7.8 },
+  { score: 77, raw: 7.9 },
+  { score: 78, raw: 8 },
+  { score: 80, raw: 8.1 },
+  { score: 81, raw: 8.2 },
+  { score: 82, raw: 8.3 },
+  { score: 83, raw: 8.4 },
+  { score: 84, raw: 8.5 },
+  { score: 86, raw: 8.6 },
+  { score: 87, raw: 8.7 },
+  { score: 88, raw: 8.8 },
+  { score: 89, raw: 8.9 },
+  { score: 90, raw: 9 },
+  { score: 91, raw: 9.1 },
+  { score: 92, raw: 9.2 },
+  { score: 93, raw: 9.3 },
+  { score: 94, raw: 9.5 },
+  { score: 95, raw: 9.6 },
+  { score: 96, raw: 9.8 },
+  { score: 97, raw: 10 },
+  { score: 98, raw: 10.2 },
+  { score: 99, raw: 10.4 },
+  { score: 100, raw: 10.6 },
+];
+
+test("SPT Scores are calculated correctly for males age 52-56", async () => {
+  male52Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("male", "52", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for males age 57-61 for SPT
+const male57Spt: TestScore[] = [
+  { score: 0, raw: 4 },
+  { score: 2, raw: 4.1 },
+  { score: 4, raw: 4.2 },
+  { score: 6, raw: 4.3 },
+  { score: 8, raw: 4.4 },
+  { score: 11, raw: 4.5 },
+  { score: 13, raw: 4.6 },
+  { score: 16, raw: 4.7 },
+  { score: 18, raw: 4.8 },
+  { score: 24, raw: 4.9 },
+  { score: 42, raw: 5 },
+  { score: 47, raw: 5.1 },
+  { score: 54, raw: 5.2 },
+  { score: 60, raw: 5.3 },
+  { score: 61, raw: 5.7 },
+  { score: 62, raw: 6 },
+  { score: 63, raw: 6.1 },
+  { score: 64, raw: 6.2 },
+  { score: 65, raw: 6.3 },
+  { score: 66, raw: 6.5 },
+  { score: 67, raw: 6.6 },
+  { score: 68, raw: 6.7 },
+  { score: 69, raw: 6.8 },
+  { score: 70, raw: 6.9 },
+  { score: 72, raw: 7 },
+  { score: 73, raw: 7.1 },
+  { score: 74, raw: 7.2 },
+  { score: 75, raw: 7.3 },
+  { score: 76, raw: 7.4 },
+  { score: 78, raw: 7.5 },
+  { score: 79, raw: 7.6 },
+  { score: 80, raw: 7.7 },
+  { score: 81, raw: 7.8 },
+  { score: 82, raw: 7.9 },
+  { score: 83, raw: 8 },
+  { score: 85, raw: 8.1 },
+  { score: 86, raw: 8.2 },
+  { score: 87, raw: 8.3 },
+  { score: 88, raw: 8.4 },
+  { score: 90, raw: 8.5 },
+  { score: 91, raw: 8.7 },
+  { score: 92, raw: 8.8 },
+  { score: 93, raw: 8.9 },
+  { score: 94, raw: 9 },
+  { score: 95, raw: 9.1 },
+  { score: 96, raw: 9.3 },
+  { score: 97, raw: 9.4 },
+  { score: 98, raw: 9.5 },
+  { score: 99, raw: 9.7 },
+  { score: 100, raw: 9.9 },
+];
+
+test("SPT Scores are calculated correctly for males age 57-61", async () => {
+  male57Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("male", "57", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for males age 62+ for SPT
+const male62Spt: TestScore[] = [
+  { score: 0, raw: 3.7 },
+  { score: 2, raw: 3.8 },
+  { score: 4, raw: 3.9 },
+  { score: 6, raw: 4 },
+  { score: 8, raw: 4.1 },
+  { score: 12, raw: 4.2 },
+  { score: 17, raw: 4.3 },
+  { score: 24, raw: 4.4 },
+  { score: 32, raw: 4.5 },
+  { score: 37, raw: 4.6 },
+  { score: 44, raw: 4.7 },
+  { score: 54, raw: 4.8 },
+  { score: 60, raw: 4.9 },
+  { score: 61, raw: 5.1 },
+  { score: 62, raw: 5.4 },
+  { score: 63, raw: 5.7 },
+  { score: 64, raw: 5.9 },
+  { score: 66, raw: 6.1 },
+  { score: 68, raw: 6.2 },
+  { score: 69, raw: 6.4 },
+  { score: 70, raw: 6.6 },
+  { score: 71, raw: 6.7 },
+  { score: 72, raw: 6.8 },
+  { score: 73, raw: 7 },
+  { score: 74, raw: 7.1 },
+  { score: 76, raw: 7.2 },
+  { score: 77, raw: 7.3 },
+  { score: 79, raw: 7.4 },
+  { score: 81, raw: 7.5 },
+  { score: 83, raw: 7.6 },
+  { score: 84, raw: 7.7 },
+  { score: 86, raw: 7.8 },
+  { score: 88, raw: 7.9 },
+  { score: 90, raw: 8 },
+  { score: 91, raw: 8.1 },
+  { score: 92, raw: 8.2 },
+  { score: 93, raw: 8.3 },
+  { score: 94, raw: 8.5 },
+  { score: 95, raw: 8.6 },
+  { score: 97, raw: 8.7 },
+  { score: 99, raw: 8.8 },
+  { score: 100, raw: 9 },
+];
+
+test("SPT Scores are calculated correctly for males age 62+", async () => {
+  male62Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("male", "62", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+/**
+ *
+ * FEMALE SCORES
+ *
+ */
 
 // scores for females age 17-21 for SPT
 const female17Spt: TestScore[] = [
@@ -141,11 +759,502 @@ const female17Spt: TestScore[] = [
   { score: 100, raw: 8.4 },
 ];
 
-test("SPT Scores are calculated correctly for females age 17-21", async ({
-  page,
-}) => {
+test("SPT Scores are calculated correctly for females age 17-21", async () => {
   female17Spt.forEach((s) => {
     const score = getScoreIncreasingIsBetter("female", "17", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for females age 22-26 for SPT
+const female22Spt: TestScore[] = [
+  { score: 0, raw: 2.7 },
+  { score: 2, raw: 2.8 },
+  { score: 4, raw: 2.9 },
+  { score: 6, raw: 3 },
+  { score: 8, raw: 3.1 },
+  { score: 11, raw: 3.2 },
+  { score: 14, raw: 3.3 },
+  { score: 18, raw: 3.4 },
+  { score: 22, raw: 3.5 },
+  { score: 27, raw: 3.6 },
+  { score: 44, raw: 3.8 },
+  { score: 54, raw: 3.9 },
+  { score: 60, raw: 4 },
+  { score: 61, raw: 4.4 },
+  { score: 62, raw: 4.6 },
+  { score: 63, raw: 4.7 },
+  { score: 64, raw: 4.8 },
+  { score: 65, raw: 4.9 },
+  { score: 66, raw: 5 },
+  { score: 67, raw: 5.1 },
+  { score: 69, raw: 5.2 },
+  { score: 71, raw: 5.3 },
+  { score: 72, raw: 5.4 },
+  { score: 74, raw: 5.5 },
+  { score: 75, raw: 5.6 },
+  { score: 76, raw: 5.7 },
+  { score: 79, raw: 5.8 },
+  { score: 80, raw: 5.9 },
+  { score: 81, raw: 6 },
+  { score: 83, raw: 6.1 },
+  { score: 84, raw: 6.2 },
+  { score: 85, raw: 6.3 },
+  { score: 86, raw: 6.4 },
+  { score: 87, raw: 6.5 },
+  { score: 88, raw: 6.6 },
+  { score: 89, raw: 6.7 },
+  { score: 90, raw: 6.8 },
+  { score: 91, raw: 6.9 },
+  { score: 92, raw: 7 },
+  { score: 93, raw: 7.1 },
+  { score: 94, raw: 7.2 },
+  { score: 95, raw: 7.4 },
+  { score: 96, raw: 7.5 },
+  { score: 97, raw: 7.7 },
+  { score: 98, raw: 7.9 },
+  { score: 99, raw: 8.4 },
+  { score: 100, raw: 8.5 },
+];
+
+test("SPT Scores are calculated correctly for females age 22-26", async () => {
+  female22Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("female", "22", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for females age 27-31 for SPT
+const female27Spt: TestScore[] = [
+  { score: 0, raw: 2.8 },
+  { score: 2, raw: 2.9 },
+  { score: 4, raw: 3 },
+  { score: 6, raw: 3.1 },
+  { score: 8, raw: 3.2 },
+  { score: 11, raw: 3.3 },
+  { score: 14, raw: 3.4 },
+  { score: 18, raw: 3.5 },
+  { score: 22, raw: 3.6 },
+  { score: 27, raw: 3.7 },
+  { score: 34, raw: 3.8 },
+  { score: 44, raw: 3.9 },
+  { score: 52, raw: 4 },
+  { score: 57, raw: 4.1 },
+  { score: 60, raw: 4.2 },
+  { score: 61, raw: 4.6 },
+  { score: 62, raw: 4.7 },
+  { score: 63, raw: 4.8 },
+  { score: 64, raw: 4.9 },
+  { score: 65, raw: 5 },
+  { score: 66, raw: 5.1 },
+  { score: 68, raw: 5.2 },
+  { score: 70, raw: 5.3 },
+  { score: 71, raw: 5.4 },
+  { score: 72, raw: 5.5 },
+  { score: 74, raw: 5.6 },
+  { score: 76, raw: 5.7 },
+  { score: 77, raw: 5.8 },
+  { score: 79, raw: 5.9 },
+  { score: 80, raw: 6.1 },
+  { score: 81, raw: 6.2 },
+  { score: 83, raw: 6.3 },
+  { score: 84, raw: 6.4 },
+  { score: 86, raw: 6.5 },
+  { score: 87, raw: 6.6 },
+  { score: 88, raw: 6.7 },
+  { score: 89, raw: 6.8 },
+  { score: 90, raw: 6.9 },
+  { score: 91, raw: 7 },
+  { score: 92, raw: 7.1 },
+  { score: 93, raw: 7.2 },
+  { score: 94, raw: 7.3 },
+  { score: 95, raw: 7.5 },
+  { score: 96, raw: 7.7 },
+  { score: 97, raw: 8 },
+  { score: 98, raw: 8.2 },
+  { score: 99, raw: 8.5 },
+  { score: 100, raw: 8.7 },
+];
+
+test("SPT Scores are calculated correctly for females age 27-31", async () => {
+  female27Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("female", "27", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for females age 32-36 for SPT
+const female32Spt: TestScore[] = [
+  { score: 0, raw: 2.8 },
+  { score: 2, raw: 2.9 },
+  { score: 4, raw: 3 },
+  { score: 6, raw: 3.1 },
+  { score: 8, raw: 3.2 },
+  { score: 11, raw: 3.3 },
+  { score: 14, raw: 3.4 },
+  { score: 18, raw: 3.5 },
+  { score: 22, raw: 3.6 },
+  { score: 27, raw: 3.7 },
+  { score: 34, raw: 3.8 },
+  { score: 44, raw: 3.9 },
+  { score: 54, raw: 4 },
+  { score: 60, raw: 4.1 },
+  { score: 61, raw: 4.5 },
+  { score: 62, raw: 4.7 },
+  { score: 63, raw: 4.8 },
+  { score: 64, raw: 4.9 },
+  { score: 65, raw: 5 },
+  { score: 66, raw: 5.1 },
+  { score: 68, raw: 5.2 },
+  { score: 70, raw: 5.3 },
+  { score: 71, raw: 5.4 },
+  { score: 73, raw: 5.5 },
+  { score: 74, raw: 5.6 },
+  { score: 76, raw: 5.7 },
+  { score: 78, raw: 5.8 },
+  { score: 80, raw: 5.9 },
+  { score: 81, raw: 6 },
+  { score: 82, raw: 6.1 },
+  { score: 83, raw: 6.2 },
+  { score: 85, raw: 6.3 },
+  { score: 87, raw: 6.4 },
+  { score: 88, raw: 6.5 },
+  { score: 89, raw: 6.7 },
+  { score: 90, raw: 6.8 },
+  { score: 91, raw: 6.9 },
+  { score: 92, raw: 7 },
+  { score: 93, raw: 7.1 },
+  { score: 94, raw: 7.3 },
+  { score: 95, raw: 7.4 },
+  { score: 96, raw: 7.6 },
+  { score: 97, raw: 7.8 },
+  { score: 98, raw: 8 },
+  { score: 99, raw: 8.4 },
+  { score: 100, raw: 8.6 },
+];
+
+test("SPT Scores are calculated correctly for females age 32-36", async () => {
+  female32Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("female", "32", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for females age 37-41 for SPT
+const female37Spt: TestScore[] = [
+  { score: 0, raw: 2.8 },
+  { score: 2, raw: 2.9 },
+  { score: 4, raw: 3 },
+  { score: 6, raw: 3.1 },
+  { score: 8, raw: 3.2 },
+  { score: 11, raw: 3.3 },
+  { score: 14, raw: 3.4 },
+  { score: 18, raw: 3.5 },
+  { score: 24, raw: 3.6 },
+  { score: 32, raw: 3.7 },
+  { score: 37, raw: 3.8 },
+  { score: 44, raw: 3.9 },
+  { score: 54, raw: 4 },
+  { score: 60, raw: 4.1 },
+  { score: 61, raw: 4.4 },
+  { score: 62, raw: 4.5 },
+  { score: 63, raw: 4.6 },
+  { score: 64, raw: 4.7 },
+  { score: 65, raw: 4.8 },
+  { score: 67, raw: 4.9 },
+  { score: 68, raw: 5 },
+  { score: 69, raw: 5.1 },
+  { score: 72, raw: 5.2 },
+  { score: 73, raw: 5.3 },
+  { score: 75, raw: 5.4 },
+  { score: 76, raw: 5.5 },
+  { score: 78, raw: 5.6 },
+  { score: 80, raw: 5.7 },
+  { score: 82, raw: 5.8 },
+  { score: 83, raw: 5.9 },
+  { score: 84, raw: 6 },
+  { score: 86, raw: 6.1 },
+  { score: 87, raw: 6.2 },
+  { score: 88, raw: 6.3 },
+  { score: 90, raw: 6.4 },
+  { score: 91, raw: 6.6 },
+  { score: 93, raw: 6.7 },
+  { score: 94, raw: 6.8 },
+  { score: 95, raw: 7 },
+  { score: 96, raw: 7.2 },
+  { score: 97, raw: 7.3 },
+  { score: 98, raw: 7.5 },
+  { score: 99, raw: 8 },
+  { score: 100, raw: 8.2 },
+];
+
+test("SPT Scores are calculated correctly for females age 37-41", async () => {
+  female37Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("female", "37", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for females age 42-46 for SPT
+const female42Spt: TestScore[] = [
+  { score: 0, raw: 2.5 },
+  { score: 2, raw: 2.6 },
+  { score: 4, raw: 2.7 },
+  { score: 6, raw: 2.8 },
+  { score: 8, raw: 2.9 },
+  { score: 11, raw: 3 },
+  { score: 14, raw: 3.1 },
+  { score: 18, raw: 3.2 },
+  { score: 22, raw: 3.3 },
+  { score: 27, raw: 3.4 },
+  { score: 34, raw: 3.5 },
+  { score: 42, raw: 3.6 },
+  { score: 47, raw: 3.7 },
+  { score: 54, raw: 3.8 },
+  { score: 60, raw: 3.9 },
+  { score: 61, raw: 4.2 },
+  { score: 62, raw: 4.5 },
+  { score: 63, raw: 4.6 },
+  { score: 65, raw: 4.7 },
+  { score: 66, raw: 4.8 },
+  { score: 67, raw: 4.9 },
+  { score: 68, raw: 5 },
+  { score: 70, raw: 5.1 },
+  { score: 72, raw: 5.2 },
+  { score: 74, raw: 5.3 },
+  { score: 76, raw: 5.4 },
+  { score: 77, raw: 5.5 },
+  { score: 79, raw: 5.6 },
+  { score: 80, raw: 5.7 },
+  { score: 83, raw: 5.8 },
+  { score: 84, raw: 5.9 },
+  { score: 86, raw: 6 },
+  { score: 87, raw: 6.1 },
+  { score: 88, raw: 6.2 },
+  { score: 89, raw: 6.3 },
+  { score: 90, raw: 6.4 },
+  { score: 91, raw: 6.5 },
+  { score: 92, raw: 6.6 },
+  { score: 93, raw: 6.7 },
+  { score: 94, raw: 6.8 },
+  { score: 95, raw: 6.9 },
+  { score: 96, raw: 7.1 },
+  { score: 97, raw: 7.2 },
+  { score: 98, raw: 7.4 },
+  { score: 99, raw: 7.9 },
+  { score: 100, raw: 8.1 },
+];
+
+test("SPT Scores are calculated correctly for females age 42-46", async () => {
+  female42Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("female", "42", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for females age 47-51 for SPT
+const female47Spt: TestScore[] = [
+  { score: 0, raw: 2.3 },
+  { score: 2, raw: 2.4 },
+  { score: 4, raw: 2.5 },
+  { score: 6, raw: 2.6 },
+  { score: 8, raw: 2.7 },
+  { score: 11, raw: 2.8 },
+  { score: 14, raw: 2.9 },
+  { score: 18, raw: 3 },
+  { score: 21, raw: 3.1 },
+  { score: 24, raw: 3.2 },
+  { score: 28, raw: 3.3 },
+  { score: 34, raw: 3.4 },
+  { score: 44, raw: 3.5 },
+  { score: 54, raw: 3.6 },
+  { score: 60, raw: 3.7 },
+  { score: 61, raw: 4.1 },
+  { score: 62, raw: 4.2 },
+  { score: 63, raw: 4.4 },
+  { score: 64, raw: 4.5 },
+  { score: 67, raw: 4.6 },
+  { score: 68, raw: 4.7 },
+  { score: 69, raw: 4.8 },
+  { score: 71, raw: 4.9 },
+  { score: 73, raw: 5 },
+  { score: 75, raw: 5.1 },
+  { score: 78, raw: 5.2 },
+  { score: 80, raw: 5.3 },
+  { score: 81, raw: 5.4 },
+  { score: 83, raw: 5.5 },
+  { score: 85, raw: 5.6 },
+  { score: 86, raw: 5.7 },
+  { score: 87, raw: 5.8 },
+  { score: 89, raw: 5.9 },
+  { score: 90, raw: 6 },
+  { score: 91, raw: 6.1 },
+  { score: 94, raw: 6.2 },
+  { score: 95, raw: 6.4 },
+  { score: 96, raw: 6.5 },
+  { score: 97, raw: 6.8 },
+  { score: 98, raw: 7.1 },
+  { score: 99, raw: 7.6 },
+  { score: 100, raw: 7.8 },
+];
+
+test("SPT Scores are calculated correctly for females age 47-51", async () => {
+  female47Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("female", "47", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for females age 52-56 for SPT
+const female52Spt: TestScore[] = [
+  { score: 0, raw: 2.3 },
+  { score: 2, raw: 2.4 },
+  { score: 4, raw: 2.5 },
+  { score: 6, raw: 2.6 },
+  { score: 8, raw: 2.7 },
+  { score: 12, raw: 2.8 },
+  { score: 17, raw: 2.9 },
+  { score: 24, raw: 3 },
+  { score: 32, raw: 3.1 },
+  { score: 37, raw: 3.2 },
+  { score: 44, raw: 3.3 },
+  { score: 54, raw: 3.4 },
+  { score: 60, raw: 3.5 },
+  { score: 61, raw: 3.9 },
+  { score: 62, raw: 4.1 },
+  { score: 64, raw: 4.2 },
+  { score: 65, raw: 4.3 },
+  { score: 67, raw: 4.4 },
+  { score: 68, raw: 4.5 },
+  { score: 70, raw: 4.6 },
+  { score: 72, raw: 4.7 },
+  { score: 73, raw: 4.8 },
+  { score: 75, raw: 4.9 },
+  { score: 77, raw: 5 },
+  { score: 79, raw: 5.1 },
+  { score: 82, raw: 5.2 },
+  { score: 83, raw: 5.3 },
+  { score: 85, raw: 5.4 },
+  { score: 87, raw: 5.5 },
+  { score: 89, raw: 5.6 },
+  { score: 90, raw: 5.7 },
+  { score: 91, raw: 5.8 },
+  { score: 92, raw: 5.9 },
+  { score: 93, raw: 6 },
+  { score: 94, raw: 6.1 },
+  { score: 95, raw: 6.2 },
+  { score: 96, raw: 6.3 },
+  { score: 97, raw: 6.5 },
+  { score: 98, raw: 6.6 },
+  { score: 99, raw: 7.1 },
+  { score: 100, raw: 7.4 },
+];
+
+test("SPT Scores are calculated correctly for females age 52-56", async () => {
+  female52Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("female", "52", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for females age 57-61 for SPT
+const female57Spt: TestScore[] = [
+  { score: 0, raw: 2.3 },
+  { score: 2, raw: 2.4 },
+  { score: 4, raw: 2.5 },
+  { score: 6, raw: 2.6 },
+  { score: 8, raw: 2.7 },
+  { score: 11, raw: 2.8 },
+  { score: 14, raw: 2.9 },
+  { score: 18, raw: 3 },
+  { score: 24, raw: 3.1 },
+  { score: 34, raw: 3.2 },
+  { score: 44, raw: 3.3 },
+  { score: 60, raw: 3.4 },
+  { score: 61, raw: 3.6 },
+  { score: 62, raw: 3.8 },
+  { score: 63, raw: 3.9 },
+  { score: 64, raw: 4 },
+  { score: 65, raw: 4.1 },
+  { score: 66, raw: 4.2 },
+  { score: 67, raw: 4.3 },
+  { score: 68, raw: 4.4 },
+  { score: 69, raw: 4.5 },
+  { score: 71, raw: 4.6 },
+  { score: 72, raw: 4.8 },
+  { score: 75, raw: 4.9 },
+  { score: 77, raw: 5 },
+  { score: 80, raw: 5.1 },
+  { score: 84, raw: 5.2 },
+  { score: 87, raw: 5.3 },
+  { score: 89, raw: 5.4 },
+  { score: 90, raw: 5.5 },
+  { score: 91, raw: 5.6 },
+  { score: 92, raw: 5.7 },
+  { score: 93, raw: 5.8 },
+  { score: 94, raw: 5.9 },
+  { score: 95, raw: 6 },
+  { score: 96, raw: 6.1 },
+  { score: 97, raw: 6.2 },
+  { score: 98, raw: 6.3 },
+  { score: 99, raw: 6.4 },
+  { score: 100, raw: 6.6 },
+];
+
+test("SPT Scores are calculated correctly for females age 57-61", async () => {
+  female57Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("female", "57", "spt", s.raw);
+    expect(score).toEqual(s.score);
+  });
+});
+
+// scores for females age 62+ for SPT
+const female62Spt: TestScore[] = [
+  { score: 0, raw: 2.3 },
+  { score: 2, raw: 2.4 },
+  { score: 4, raw: 2.5 },
+  { score: 6, raw: 2.6 },
+  { score: 8, raw: 2.7 },
+  { score: 11, raw: 2.8 },
+  { score: 14, raw: 2.9 },
+  { score: 18, raw: 3 },
+  { score: 24, raw: 3.1 },
+  { score: 34, raw: 3.2 },
+  { score: 44, raw: 3.3 },
+  { score: 60, raw: 3.4 },
+  { score: 61, raw: 3.6 },
+  { score: 62, raw: 3.9 },
+  { score: 63, raw: 4 },
+  { score: 65, raw: 4.1 },
+  { score: 66, raw: 4.2 },
+  { score: 67, raw: 4.3 },
+  { score: 68, raw: 4.4 },
+  { score: 69, raw: 4.5 },
+  { score: 71, raw: 4.6 },
+  { score: 72, raw: 4.7 },
+  { score: 73, raw: 4.8 },
+  { score: 75, raw: 4.9 },
+  { score: 77, raw: 5 },
+  { score: 80, raw: 5.1 },
+  { score: 83, raw: 5.2 },
+  { score: 86, raw: 5.3 },
+  { score: 88, raw: 5.4 },
+  { score: 90, raw: 5.5 },
+  { score: 91, raw: 5.6 },
+  { score: 92, raw: 5.7 },
+  { score: 93, raw: 5.8 },
+  { score: 94, raw: 5.9 },
+  { score: 95, raw: 6 },
+  { score: 96, raw: 6.1 },
+  { score: 97, raw: 6.2 },
+  { score: 98, raw: 6.3 },
+  { score: 99, raw: 6.4 },
+  { score: 100, raw: 6.6 },
+];
+
+test("SPT Scores are calculated correctly for females age 62+", async () => {
+  female62Spt.forEach((s) => {
+    const score = getScoreIncreasingIsBetter("female", "62", "spt", s.raw);
     expect(score).toEqual(s.score);
   });
 });
