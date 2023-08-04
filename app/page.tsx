@@ -8,12 +8,13 @@ const LandingPage = () => {
     <main>
       <div className="bg-[url('../public/sdc-image.png')] bg-cover bg-center bg-no-repeat h-[calc(100vh-49px)] w-screen">
         <div className="backdrop-blur-[3px] h-full w-full flex flex-col justify-around items-center relative pb-12">
-          <h1 className="text-stone-100 text-4xl md:text-6xl font-bold drop-shadow-lg pl-4 pt-4 tracking-wide">
+          <h1 className="text-stone-100 text-4xl md:text-6xl font-bold drop-shadow-lg pt-4 tracking-wide text-center px-4">
             ARMY ACFT CALCULATOR
           </h1>
-          <p className="text-stone-100 drop-shadow-md text-xl p-4">
-            No BS. Only what you need. Nothing you don't.
-          </p>
+          <div className="text-stone-100 drop-shadow-md text-xl p-4 text-center md:text-2xl">
+            <p>The ACFT is hard.</p>
+            <p>Calculating your score shouldn't be.</p>
+          </div>
           <div className="flex flex-col xs:flex-row gap-4 text-center">
             <Link href="/calculator">
               <Button variant="gold" className="w-[140px]">

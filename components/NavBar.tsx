@@ -146,6 +146,20 @@ const NavBar = () => {
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <Link href="/about" legacyBehavior passHref>
+              <NavigationMenuLink className={`${navigationMenuTriggerStyle()}`}>
+                <span
+                  className={`w-full ${
+                    currentRoute === "/about" ? "text-amber-400" : ""
+                  }`}
+                >
+                  About
+                </span>
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
       <div className="md:hidden flex justify-end items-center">
@@ -160,6 +174,9 @@ const NavBar = () => {
             <div className="text-stone-400 flex flex-col pt-4">
               <CloseMenuLink href="/" setOpen={setOpen}>
                 Home
+              </CloseMenuLink>
+              <CloseMenuLink href="/about" setOpen={setOpen}>
+                About
               </CloseMenuLink>
               <div className="flex items-center gap-2 mt-6 mb-2">
                 <div className="text-stone-300 tracking-wider w-fit font-bold">
