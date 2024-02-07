@@ -21,7 +21,7 @@ const PlkSlider = ({ plkRaw, setPlkRaw, plkScore }: Props) => {
   return (
     <ExerciseContainer id="plk-slider">
       <ExerciseTitle>
-        <div className="mb-4 text-xl">Plank</div>
+        <div className="mb-4 text-xl text-stone-400">Plank</div>
         <div className="flex justify-between md:gap-4 md:justify-end">
           <Button
             data-testid="plk-minus-button"

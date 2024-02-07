@@ -20,7 +20,7 @@ const SptSlider = ({ sptRaw, setSptRaw, sptScore }: Props) => {
   return (
     <ExerciseContainer id="spt-slider">
       <ExerciseTitle>
-        <div className="mb-4 text-xl">Standing Power Throw</div>
+        <div className="mb-4 text-xl text-stone-400">Standing Power Throw</div>
         <div className="flex justify-between md:gap-4 md:justify-end">
           <Button
             data-testid="spt-minus-button"

@@ -21,7 +21,7 @@ const SdcSlider = ({ sdcRaw, setSdcRaw, sdcScore }: Props) => {
   return (
     <ExerciseContainer id="sdc-slider">
       <ExerciseTitle>
-        <div className="mb-4 text-xl">Sprint Drag Carry</div>
+        <div className="mb-4 text-xl text-stone-400">Sprint Drag Carry</div>
         <div className="flex justify-between md:gap-4 md:justify-end">
           <Button
             data-testid="sdc-minus-button"

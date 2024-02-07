@@ -20,7 +20,7 @@ const HrpSlider = ({ hrpRaw, setHrpRaw, hrpScore }: Props) => {
   return (
     <ExerciseContainer id="hrp-slider">
       <ExerciseTitle>
-        <div className="mb-4 text-xl">Hand Release Pushup</div>
+        <div className="mb-4 text-xl text-stone-400">Hand Release Pushup</div>
         <div className="flex justify-between md:gap-4 md:justify-end">
           <Button
             data-testid="hrp-minus-button"

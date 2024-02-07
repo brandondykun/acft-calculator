@@ -21,7 +21,7 @@ const TmrSlider = ({ tmrRaw, setTmrRaw, tmrScore }: Props) => {
   return (
     <ExerciseContainer id="tmr-slider">
       <ExerciseTitle>
-        <div className="mb-4 text-xl">Two Mile Run</div>
+        <div className="mb-4 text-xl text-stone-400">Two Mile Run</div>
         <div className="flex justify-between md:gap-4 md:justify-end">
           <Button
             data-testid="tmr-minus-button"

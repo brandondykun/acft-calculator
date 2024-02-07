@@ -33,10 +33,10 @@ const MinMaxScoresContainer = () => {
         <AgeSelect age={age} setAge={setAge} />
       </div>
       <div className="mb-16 text-xl">
-        <div className="text-xl mb-4 pb-2 border-b dark:border-b-stone-900 border-b-solid">
+        <div className="text-xl text-stone-400 mb-4 pb-2 border-b dark:border-b-stone-900 border-b-solid">
           MAX DEADLIFT
         </div>
-        <div className="flex justify-between dark:text-stone-400">
+        <div className="flex justify-between dark:text-stone-300">
           <div>
             <div className="text-stone-600 text-sm pb-2">MIN</div>
             <div>{mdlMin.raw} lbs</div>
@@ -49,10 +49,10 @@ const MinMaxScoresContainer = () => {
       </div>
 
       <div className="mb-16 text-xl">
-        <div className="text-xl mb-4 pb-2 border-b dark:border-b-stone-900 border-b-solid">
+        <div className="text-xl text-stone-400 mb-4 pb-2 border-b dark:border-b-stone-900 border-b-solid">
           STANDING POWER THROW
         </div>
-        <div className="flex justify-between dark:text-stone-400">
+        <div className="flex justify-between dark:text-stone-300">
           <div>
             <div className="text-stone-600 text-sm pb-2">MIN</div>
             <div>{sptMin.raw} m</div>
@@ -65,10 +65,10 @@ const MinMaxScoresContainer = () => {
       </div>
 
       <div className="mb-16 text-xl">
-        <div className="text-xl mb-4 pb-2 border-b dark:border-b-stone-900 border-b-solid">
+        <div className="text-xl text-stone-400 mb-4 pb-2 border-b dark:border-b-stone-900 border-b-solid">
           HAND RELEASE PUSHUP
         </div>
-        <div className="flex justify-between dark:text-stone-400">
+        <div className="flex justify-between dark:text-stone-300">
           <div>
             <div className="text-stone-600 text-sm pb-2">MIN</div>
             <div>{hrpMin.raw} reps</div>
@@ -81,10 +81,10 @@ const MinMaxScoresContainer = () => {
       </div>
 
       <div className="mb-16 text-xl">
-        <div className="text-xl mb-4 pb-2 border-b dark:border-b-stone-900 border-b-solid">
+        <div className="text-xl text-stone-400 mb-4 pb-2 border-b dark:border-b-stone-900 border-b-solid">
           SPRINT DRAG CARRY
         </div>
-        <div className="flex justify-between dark:text-stone-400">
+        <div className="flex justify-between dark:text-stone-300">
           <div>
             <div className="text-stone-600 text-sm pb-2">MIN</div>
             <div>{secondsToMinutesAndSeconds(sdcMin.raw)}</div>
@@ -97,10 +97,10 @@ const MinMaxScoresContainer = () => {
       </div>
 
       <div className="mb-16 text-xl">
-        <div className="text-xl mb-4 pb-2 border-b dark:border-b-stone-900 border-b-solid">
+        <div className="text-xl text-stone-400 mb-4 pb-2 border-b dark:border-b-stone-900 border-b-solid">
           PLANK
         </div>
-        <div className="flex justify-between dark:text-stone-400">
+        <div className="flex justify-between dark:text-stone-300">
           <div>
             <div className="text-stone-600 text-sm pb-2">MIN</div>
             <div>{secondsToMinutesAndSeconds(plkMin.raw)}</div>
@@ -113,10 +113,10 @@ const MinMaxScoresContainer = () => {
       </div>
 
       <div className="mb-16 text-xl">
-        <div className="text-xl mb-4 pb-2 border-b dark:border-b-stone-900 border-b-solid">
+        <div className="text-xl text-stone-400 mb-4 pb-2 border-b dark:border-b-stone-900 border-b-solid">
           TWO MILE RUN
         </div>
-        <div className="flex justify-between dark:text-stone-400">
+        <div className="flex justify-between dark:text-stone-300">
           <div>
             <div className="text-stone-600 text-sm pb-2">MIN</div>
             <div>{secondsToMinutesAndSeconds(tmrMin.raw)}</div>

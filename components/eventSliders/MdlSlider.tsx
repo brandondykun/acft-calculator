@@ -20,7 +20,7 @@ const MdlSlider = ({ mdlRaw, setMdlRaw, mdlScore }: Props) => {
   return (
     <ExerciseContainer id="mdl-slider">
       <ExerciseTitle>
-        <div className="mb-4 text-xl">Max Dead Lift</div>
+        <div className="mb-4 text-xl text-stone-400">Max Dead Lift</div>
         <div className="flex justify-between md:gap-4 md:justify-end">
           <Button
             data-testid="mdl-minus-button"
