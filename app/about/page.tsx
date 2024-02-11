@@ -75,7 +75,7 @@ const AboutPage = () => {
             every time, so you can use our tool with confidence."
           />
           <GoalCard
-            number={2}
+            number={3}
             title="Efficiency"
             body="You have important things to do. Calculating ACFT scores should be
             quick and easy, so you can get back to the important stuff."
