@@ -10,9 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 const space_grotesk = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ACFT Calculator",
+  title: "AFT Calculator",
   description:
-    "Army ACFT calculator. Calculate ACFT score based on performance in each event. View min and max scores necessary to pass or max each event.",
+    "The Army AFT/ACFT calculator. Calculate AFT and ACFT scores based on performance in each event. View min and max scores necessary to pass or max each event.",
 };
 
 export default function RootLayout({
