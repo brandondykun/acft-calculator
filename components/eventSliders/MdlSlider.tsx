@@ -11,12 +11,18 @@ type Props = {
   mdlRaw: number;
   setMdlRaw: React.Dispatch<React.SetStateAction<number>>;
   mdlScore: number;
+  testType?: "acft" | "aft";
 };
 
-const MIN_WEIGHT = 0;
-const MAX_WEIGHT = 340;
+const MdlSlider = ({
+  mdlRaw,
+  setMdlRaw,
+  mdlScore,
+  testType = "acft",
+}: Props) => {
+  const MIN_WEIGHT = 0;
+  const MAX_WEIGHT = testType === "acft" ? 340 : 350;
 
-const MdlSlider = ({ mdlRaw, setMdlRaw, mdlScore }: Props) => {
   return (
     <ExerciseContainer id="mdl-slider">
       <ExerciseTitle>

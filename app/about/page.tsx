@@ -77,7 +77,7 @@ const AboutPage = () => {
           <GoalCard
             number={3}
             title="Efficiency"
-            body="You have important things to do. Calculating ACFT scores should be
+            body="You have important things to do. Calculating AFT/ACFT scores should be
             quick and easy, so you can get back to the important stuff."
           />
         </div>
@@ -88,11 +88,11 @@ const AboutPage = () => {
         title="Why was this site created?"
         icon={<HelpCircle size={60} color="#fbbf24" />}
       >
-        Calculating ACFT scores can be a pain and other tools just weren't
+        Calculating AFT/ACFT scores can be a pain and other tools just weren't
         cutting it. They were either cluttered with ads, or didn't work well on
         a mobile device. A tool was needed that didn't require downloading
         another app, and was easy to use from any mobile device. Hence, the Army
-        ACFT Calculator was born.
+        AFT Calculator was born.
       </TextBoxWithIcon>
 
       <DividerText text="Our Motivation" />
@@ -100,7 +100,7 @@ const AboutPage = () => {
         title="Made for Soldiers by Soldiers"
         icon={<Hammer size={60} color="#fbbf24" />}
       >
-        First and foremost, the ACFT Calculator was made entirely by Soldiers as
+        First and foremost, the AFT Calculator was made entirely by Soldiers as
         a tool to help other Soldiers. We are motivated to get it right. We know
         that Army software isn't the best sometimes, so we are doing our part to
         give you a better experience and to make your life a little easier.
@@ -111,14 +111,14 @@ const AboutPage = () => {
         title="Accurate Data"
         icon={<BarChart3 size={60} color="#fbbf24" />}
       >
-        Your ACFT score matters. To ensure the highest accuracy, robust tests
+        Your AFT score matters. To ensure the highest accuracy, robust tests
         were written to ensure that the raw values entered calculate to the
         correct scores. Yea yea, we get it. The technical coding stuff isn't
         important. But what is important is that your scores are accurate, and
         we went out of our way to prioritize calculating accurate scores to
         ensure you get the score you deserve. In fact,{" "}
         <span className="text-amber-400">
-          our tests caught errors on the Army's ACFT Scoring Scales pdf.
+          our tests caught errors on the Army's old ACFT Scoring Scales pdf.
         </span>{" "}
         Don't believe us? Check out the Male 52-56 Sprint Drag Carry scale.
         Points 79 and 80 both have a raw value of 02:23. That's not the only

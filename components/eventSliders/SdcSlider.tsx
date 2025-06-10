@@ -14,8 +14,8 @@ type Props = {
   sdcScore: number;
 };
 
-const MIN_TIME_IN_SECS = 89;
-const MAX_TIME_IN_SECS = 348;
+const MIN_TIME_IN_SECS = 89; // 1:29
+const MAX_TIME_IN_SECS = 348; // 5:48
 
 const SdcSlider = ({ sdcRaw, setSdcRaw, sdcScore }: Props) => {
   return (

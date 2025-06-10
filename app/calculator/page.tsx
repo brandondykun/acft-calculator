@@ -56,7 +56,7 @@ export default function Calculator() {
       <div className="text-3xl p-8 text-amber-400 text-center md:text-left">
         ACFT SCORE CALCULATOR
       </div>
-      <div className="max-w-[600px] m-auto p-4">
+      <div className="max-w-[600px] m-auto p-4 pb-12">
         <div className="flex justify-between m-auto py-6 gap-4">
           <GenderSelect gender={gender} setGender={setGender} />
           <AgeSelect age={age} setAge={setAge} />

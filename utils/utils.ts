@@ -1,4 +1,5 @@
-const data = require("../data/data.json");
+const acftScores = require("../data/data.json");
+const aftScores = require("../data/aft_scores.json");
 import { Age, Gender, Exercise, ScoreObject } from "@/types";
 
 export const padTo2Digits = (num: number) => {
@@ -18,8 +19,10 @@ export const getScoreDecreasingIsBetter = (
   gender: Gender,
   age: Age,
   exercise: Exercise,
-  raw: number
+  raw: number,
+  testType: "acft" | "aft" = "acft"
 ) => {
+  const data = testType === "acft" ? acftScores : aftScores;
   const exerciseData = data[exercise][gender][age];
   for (let i = 0; i < exerciseData.length; i++) {
     if (exerciseData[0].raw < raw) {
@@ -38,8 +41,10 @@ export const getScoreIncreasingIsBetter = (
   gender: Gender,
   age: Age,
   exercise: Exercise,
-  raw: number
+  raw: number,
+  testType: "acft" | "aft" = "acft"
 ) => {
+  const data = testType === "acft" ? acftScores : aftScores;
   const exerciseData = data[exercise][gender][age];
   for (let i = 0; i < exerciseData.length; i++) {
     if (exerciseData[0].raw > raw) {
@@ -69,19 +74,30 @@ type MinMaxReturn = {
   tmrMax: ScoreObject;
 };
 
-export const getMinMaxScores = (gender: Gender, age: Age): MinMaxReturn => {
+export const getMinMaxScores = (
+  gender: Gender,
+  age: Age,
+  testType: "acft" | "aft" = "acft"
+): MinMaxReturn => {
+  const data = testType === "acft" ? acftScores : aftScores;
   const mdlMin = data.mdl[gender][age].find((score: ScoreObject) => {
     return score.score === 60;
   });
   const mdlMax = data.mdl[gender][age].find((score: ScoreObject) => {
     return score.score === 100;
   });
-  const sptMin = data.spt[gender][age].find((score: ScoreObject) => {
-    return score.score === 60;
-  });
-  const sptMax = data.spt[gender][age].find((score: ScoreObject) => {
-    return score.score === 100;
-  });
+  const sptMin =
+    testType === "acft"
+      ? data.spt[gender][age].find((score: ScoreObject) => {
+          return score.score === 60;
+        })
+      : null;
+  const sptMax =
+    testType === "acft"
+      ? data.spt[gender][age].find((score: ScoreObject) => {
+          return score.score === 100;
+        })
+      : null;
   const hrpMin = data.hrp[gender][age].find((score: ScoreObject) => {
     return score.score === 60;
   });

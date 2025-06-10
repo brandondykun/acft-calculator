@@ -120,6 +120,21 @@ const NavBar = () => {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
+            <Link href="/aft-calculator" legacyBehavior passHref>
+              <NavigationMenuLink className={`${navigationMenuTriggerStyle()}`}>
+                <span
+                  className={`w-full ${
+                    currentRoute === "/aft-calculator" ? "text-amber-400" : ""
+                  }`}
+                >
+                  AFT Calculator{" "}
+                  <span className="text-xs font-light">(NEW)</span>
+                </span>
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
             <Link href="/calculator" legacyBehavior passHref>
               <NavigationMenuLink className={`${navigationMenuTriggerStyle()}`}>
                 <span
@@ -127,7 +142,7 @@ const NavBar = () => {
                     currentRoute === "/calculator" ? "text-amber-400" : ""
                   }`}
                 >
-                  Calculator
+                  ACFT Calculator
                 </span>
               </NavigationMenuLink>
             </Link>
@@ -184,8 +199,12 @@ const NavBar = () => {
                 </div>
                 <div className="h-[1px] bg-stone-300 flex-1"></div>
               </div>
+              <CloseMenuLink href="/aft-calculator" setOpen={setOpen}>
+                AFT Calculator{" "}
+                <span className="text-amber-500 text-sm">(NEW)</span>
+              </CloseMenuLink>
               <CloseMenuLink href="/calculator" setOpen={setOpen}>
-                Calculator
+                ACFT Calculator
               </CloseMenuLink>
               <CloseMenuLink href="/min-max" setOpen={setOpen}>
                 Min/Max

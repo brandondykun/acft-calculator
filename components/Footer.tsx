@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-stone-900 border-t border-t-stone-800 border-solid text-stone-400 px-4 py-8 md:px-6 bg-opacity-70">
       <div className="lg:flex justify-between max-w-4xl m-auto gap-12">
         <div className="text-stone-500 text-xl flex flex-col xs:items-center justify-center mb-8 lg:mb-0 flex-1">
-          <div>ARMY ACFT CALCULATOR</div>
+          <div>ARMY AFT CALCULATOR</div>
         </div>
         <div className="xs:flex justify-center gap-12 flex-2">
           <div className="sm:flex gap-12">
@@ -31,9 +31,14 @@ const Footer = () => {
               <div className="text-stone-200 mb-3 hover:cursor-default font-bold">
                 TOOLS
               </div>
+              <Link href="/aft-calculator" legacyBehavior passHref>
+                <span className="hover:underline hover:cursor-pointer">
+                  AFT Calculator
+                </span>
+              </Link>
               <Link href="/calculator" legacyBehavior passHref>
                 <span className="hover:underline hover:cursor-pointer">
-                  Calculator
+                  ACFT Calculator
                 </span>
               </Link>
               <Link href="/min-max" legacyBehavior passHref>

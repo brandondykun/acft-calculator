@@ -12,12 +12,18 @@ type Props = {
   tmrRaw: number;
   setTmrRaw: React.Dispatch<React.SetStateAction<number>>;
   tmrScore: number;
+  testType?: "acft" | "aft";
 };
 
-const MIN_TIME_IN_SECS = 801;
-const MAX_TIME_IN_SECS = 1620;
+const TmrSlider = ({
+  tmrRaw,
+  setTmrRaw,
+  tmrScore,
+  testType = "acft",
+}: Props) => {
+  const MIN_TIME_IN_SECS = 801; // 13:21
+  const MAX_TIME_IN_SECS = testType === "acft" ? 1620 : 1675; // 27:00 or 27:55
 
-const TmrSlider = ({ tmrRaw, setTmrRaw, tmrScore }: Props) => {
   return (
     <ExerciseContainer id="tmr-slider">
       <ExerciseTitle>

@@ -14,8 +14,8 @@ type Props = {
   plkScore: number;
 };
 
-const MIN_TIME_IN_SECS = 40;
-const MAX_TIME_IN_SECS = 220;
+const MIN_TIME_IN_SECS = 40; // 40 seconds
+const MAX_TIME_IN_SECS = 220; // 3:40
 
 const PlkSlider = ({ plkRaw, setPlkRaw, plkScore }: Props) => {
   return (
