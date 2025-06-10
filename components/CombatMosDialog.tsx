@@ -13,7 +13,7 @@ const CombatMosDialog = () => {
       <DialogTrigger>
         <Info size={18} />
       </DialogTrigger>
-      <DialogContent className="overflow-y-scroll max-h-screen">
+      <DialogContent className="overflow-y-scroll max-h-[80vh]">
         <DialogHeader>
           <DialogTitle className="text-stone-200 mb-4">
             Combat MOSs for the purposes of the AFT:
