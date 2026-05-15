@@ -39,7 +39,11 @@ const PlkPage = () => {
       <div className="relative">
         <div className="h-[1px] dark:bg-stone-400 absolute top-[50%] left-0 right-0 md:left-[15%] md:right-[15%]"></div>
         <div className="m-auto p-6 border-2 border-solid dark:border-stone-400 rounded-[50%] relative h-40 w-40 dark:bg-stone-900 flex justify-center items-center">
-          <img src={plkImage.src} alt="Plank Image" className="w-[110px]" />
+          <img
+            src={plkImage.src}
+            alt="Illustration of a Soldier holding a forearm plank position"
+            className="w-[110px]"
+          />
         </div>
       </div>
 

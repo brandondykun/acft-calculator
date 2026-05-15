@@ -42,7 +42,11 @@ const MdlPage = () => {
       <div className="relative">
         <div className="h-[1px] dark:bg-stone-400 absolute top-[50%] left-0 right-0 md:left-[15%] md:right-[15%]"></div>
         <div className="m-auto p-6 border-2 border-solid dark:border-stone-400 rounded-[50%] relative h-40 w-40 dark:bg-stone-900 flex justify-center items-center">
-          <img src={deadLiftImage.src} alt="Dead Lift Image" className="h-24" />
+          <img
+            src={deadLiftImage.src}
+            alt="Illustration of a Soldier performing a 3-repetition maximum deadlift"
+            className="h-24"
+          />
         </div>
       </div>
 

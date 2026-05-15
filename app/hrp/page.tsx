@@ -42,7 +42,7 @@ const HrpPage = () => {
         <div className="m-auto p-6 border-2 border-solid dark:border-stone-400 rounded-[50%] relative h-40 w-40 dark:bg-stone-900 flex justify-center items-center">
           <img
             src={hrpImage.src}
-            alt="Hand Release Pushup Image"
+            alt="Illustration of a Soldier performing a hand release push-up"
             className="w-[110px]"
           />
         </div>

@@ -42,7 +42,7 @@ const SptPage = () => {
         <div className="m-auto p-6 border-2 border-solid dark:border-stone-400 rounded-[50%] relative h-40 w-40 dark:bg-stone-900 flex justify-center items-center">
           <img
             src={sptImage.src}
-            alt="Standing Power Throw Image"
+            alt="Illustration of a Soldier performing a standing power throw with a medicine ball"
             className="h-24"
           />
         </div>

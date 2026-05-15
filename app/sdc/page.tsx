@@ -44,7 +44,7 @@ const SdcPage = () => {
         <div className="m-auto p-6 border-2 border-solid dark:border-stone-400 rounded-[50%] relative h-40 w-40 dark:bg-stone-900 flex justify-center items-center">
           <img
             src={sdcImage.src}
-            alt="Sprint Drag Carry Image"
+            alt="Illustration of a Soldier dragging a sled during the Sprint-Drag-Carry event"
             className="h-[100px]"
           />
         </div>

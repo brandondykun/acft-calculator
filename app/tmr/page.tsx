@@ -41,7 +41,7 @@ const TmrPage = () => {
         <div className="m-auto p-6 border-2 border-solid dark:border-stone-400 rounded-[50%] relative h-40 w-40 dark:bg-stone-900 flex justify-center items-center">
           <img
             src={tmrImage.src}
-            alt="Two Mile Run Image"
+            alt="Illustration of a Soldier running during the two-mile run event"
             className="h-[110px]"
           />
         </div>
