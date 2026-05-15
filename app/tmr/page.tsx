@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Iframe from "@/components/Iframe";
 import tmrImage from "../../public/run.svg";
+
+export const metadata: Metadata = {
+  title: "Two-Mile Run (TMR) — How to Perform and Score",
+  description:
+    "Learn how the AFT/ACFT Two-Mile Run (TMR) is performed and scored. Includes a video demonstration and event details.",
+  alternates: { canonical: "/tmr" },
+};
 
 const TmrPage = () => {
   return (

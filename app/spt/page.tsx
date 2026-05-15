@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Iframe from "@/components/Iframe";
 import sptImage from "../../public/powerthrow.svg";
+
+export const metadata: Metadata = {
+  title: "Standing Power Throw (SPT) — How to Perform and Score",
+  description:
+    "Learn how the ACFT Standing Power Throw (SPT) is performed and scored. Includes a video demonstration and event details.",
+  alternates: { canonical: "/spt" },
+};
 
 const SptPage = () => {
   return (

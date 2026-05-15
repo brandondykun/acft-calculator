@@ -37,35 +37,35 @@ export default function Calculator() {
     age,
     "mdl",
     mdlRaw,
-    "aft"
+    "aft",
   );
   const hrpScore = getScoreIncreasingIsBetter(
     genderToUse,
     age,
     "hrp",
     hrpRaw,
-    "aft"
+    "aft",
   );
   const sdcScore = getScoreDecreasingIsBetter(
     genderToUse,
     age,
     "sdc",
     sdcRaw,
-    "aft"
+    "aft",
   );
   const plkScore = getScoreIncreasingIsBetter(
     genderToUse,
     age,
     "plk",
     plkRaw,
-    "aft"
+    "aft",
   );
   const tmrScore = getScoreDecreasingIsBetter(
     genderToUse,
     age,
     "tmr",
     tmrRaw,
-    "aft"
+    "aft",
   );
 
   // if combat MOS, need 350 points, otherwise 300 points

@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Iframe from "@/components/Iframe";
 import plkImage from "../../public/plank.svg";
+
+export const metadata: Metadata = {
+  title: "Plank (PLK) — How to Perform and Score",
+  description:
+    "Learn how the AFT/ACFT Plank (PLK) is performed and scored. Includes a video demonstration and event details.",
+  alternates: { canonical: "/plk" },
+};
 
 const PlkPage = () => {
   return (

@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Iframe from "@/components/Iframe";
 import deadLiftImage from "../../public/deadlift.svg";
+
+export const metadata: Metadata = {
+  title: "3 Repetition Maximum Deadlift (MDL) — How to Perform and Score",
+  description:
+    "Learn how the AFT/ACFT 3 Repetition Maximum Deadlift (MDL) is performed and scored. Includes a video demonstration and event details.",
+  alternates: { canonical: "/mdl" },
+};
 
 const MdlPage = () => {
   return (

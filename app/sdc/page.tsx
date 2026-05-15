@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Iframe from "@/components/Iframe";
 import sdcImage from "../../public/dragcarry.svg";
+
+export const metadata: Metadata = {
+  title: "Sprint-Drag-Carry (SDC) — How to Perform and Score",
+  description:
+    "Learn how the AFT/ACFT Sprint-Drag-Carry (SDC) is performed and scored. Includes a video demonstration and event details.",
+  alternates: { canonical: "/sdc" },
+};
 
 const SdcPage = () => {
   return (

@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import MinMaxScoresContainer from "@/components/MinMaxScoresContainer";
+
+export const metadata: Metadata = {
+  title: "AFT / ACFT Min and Max Scores by Age and Gender",
+  description:
+    "View the minimum and maximum raw scores needed to pass and to max each AFT/ACFT event, broken down by age group and gender.",
+  alternates: { canonical: "/min-max" },
+};
 
 const MinMaxPage = () => {
   return (

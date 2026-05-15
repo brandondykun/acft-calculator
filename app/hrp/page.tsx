@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Iframe from "@/components/Iframe";
 import hrpImage from "../../public/pushup.svg";
+
+export const metadata: Metadata = {
+  title: "Hand Release Push-Up (HRP) — How to Perform and Score",
+  description:
+    "Learn how the AFT/ACFT Hand Release Push-Up (HRP) is performed and scored. Includes a video demonstration and event details.",
+  alternates: { canonical: "/hrp" },
+};
 
 const HrpPage = () => {
   return (

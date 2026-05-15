@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import { HelpCircle, Hammer, BarChart3, Scale } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "About the Army AFT/ACFT Calculator — a mobile-first tool built to help Soldiers calculate AFT and ACFT scores quickly and accurately.",
+  alternates: { canonical: "/about" },
+};
 
 type DividerText = {
   text: string;

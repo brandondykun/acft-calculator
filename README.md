@@ -3,7 +3,7 @@
 Welcome to the Army ACFT Score Calculator! The Army ACFT Score Calculator can be used to calculate individual scores for the Army Combat Fitness Test.
 
 
-_Check it out live [here](https://armyacftcalculator.com)!_
+_Check it out live [here](https://armyaftcalculator.com)!_
 
 <br />
 
