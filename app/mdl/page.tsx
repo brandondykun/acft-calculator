@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Iframe from "@/components/Iframe";
+import JsonLd from "@/components/JsonLd";
+import { mdlHowToSchema } from "@/lib/structuredData";
 import deadLiftImage from "../../public/deadlift.svg";
 
 export const metadata: Metadata = {
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
 const MdlPage = () => {
   return (
     <main className="p-4 text-stone-300 w-full">
+      <JsonLd data={mdlHowToSchema} />
       <h1 className="text-3xl mb-8 text-amber-400 p-8 text-center md:text-left">
         3 REPETITION MAXIMUM DEADLIFT (MDL)
       </h1>

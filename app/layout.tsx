@@ -4,8 +4,8 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
-
-const inter = Inter({ subsets: ["latin"] });
+import JsonLd from "@/components/JsonLd";
+import { siteSchema } from "@/lib/structuredData";
 
 const space_grotesk = Space_Grotesk({ subsets: ["latin"] });
 
@@ -31,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${space_grotesk.className} dark:bg-stone-950 min-h-screen min-w-full`}
       >
+        <JsonLd data={siteSchema} />
         <NavBar />
         {children}
         <Footer />

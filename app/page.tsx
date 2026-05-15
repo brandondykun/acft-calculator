@@ -4,10 +4,13 @@ import { Button } from "@/components/ui/button";
 import { ChevronsDown, AlertCircle } from "lucide-react";
 import iphoneImage from "../public/iphone-mockup.png";
 import sdcImage from "../public/sdc-image.png";
+import JsonLd from "@/components/JsonLd";
+import { webAppSchema } from "@/lib/structuredData";
 
 const LandingPage = () => {
   return (
     <main>
+      <JsonLd data={webAppSchema} />
       <div className="relative h-[calc(100vh-49px)] w-screen overflow-hidden">
         <Image
           src={sdcImage}

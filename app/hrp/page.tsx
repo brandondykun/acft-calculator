@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Iframe from "@/components/Iframe";
+import JsonLd from "@/components/JsonLd";
+import { hrpHowToSchema } from "@/lib/structuredData";
 import hrpImage from "../../public/pushup.svg";
 
 export const metadata: Metadata = {
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
 const HrpPage = () => {
   return (
     <main className="p-4 text-stone-300 w-full">
+      <JsonLd data={hrpHowToSchema} />
       <h1 className="text-3xl mb-8 text-amber-400 p-8 text-center md:text-left">
         HAND RELEASE PUSHUP - ARM EXTENSION (HRP)
       </h1>
