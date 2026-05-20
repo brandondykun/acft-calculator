@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark min-h-screen w-screen">
+    <html lang="en" className="dark min-h-screen w-screen scroll-smooth">
       <body
         className={`${space_grotesk.className} dark:bg-stone-950 min-h-screen min-w-full`}
       >

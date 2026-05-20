@@ -25,6 +25,12 @@ const Footer = () => {
                   About
                 </span>
               </Link>
+              <Link href="/cft" legacyBehavior passHref>
+                <span className="hover:underline hover:cursor-pointer">
+                  CFT{" "}
+                  <span className="text-amber-500 text-sm">(NEW)</span>
+                </span>
+              </Link>
             </div>
 
             <div className="flex flex-col mb-8 lg:mb-0">

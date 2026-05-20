@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ChevronsDown, AlertCircle } from "lucide-react";
+import { ChevronsDown, AlertCircle, ArrowRight } from "lucide-react";
 import iphoneImage from "../public/iphone-mockup.png";
 import sdcImage from "../public/sdc-image.png";
 import JsonLd from "@/components/JsonLd";
@@ -23,7 +23,7 @@ const LandingPage = () => {
         />
         <div className="backdrop-blur-[3px] h-full w-full flex flex-col justify-around items-center relative pb-12">
           <h1 className="text-stone-100 text-4xl md:text-6xl font-bold drop-shadow-lg pt-4 tracking-wide text-center px-4">
-            ARMY AFT/ACFT CALCULATOR
+            ARMY AFT CALCULATOR
           </h1>
           <div className="text-stone-100 drop-shadow-md text-xl p-4 text-center md:text-2xl">
             <p>The AFT is hard.</p>
@@ -35,11 +35,6 @@ const LandingPage = () => {
                 Calculate AFT Score
               </Button>
             </Link>
-            <Link href="/calculator">
-              <Button variant="gold" className="w-[180px]">
-                Calculate ACFT Score
-              </Button>
-            </Link>
           </div>
 
           <div className="text-stone-100 flex flex-col justify-center items-center absolute bottom-2 ">
@@ -49,14 +44,30 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="bg-amber-400 py-12 text-stone-950 text-center flex items-center justify-center gap-4 px-8">
+      <Link
+        href="/cft"
+        className="group bg-amber-400 py-12 text-stone-950 text-center flex items-center justify-center gap-4 px-8"
+      >
         <AlertCircle size={18} className="hidden md:flex" />
         <div className="md:text-lg">
-          On June 1, 2025, the ACFT will be replaced by the Army Fitness Test
-          (AFT)!
+          Announcing the new Combat Field Test (CFT), with phased rollout
+          beginning April 17, 2026.{" "}
+          <span className="inline-flex items-baseline gap-1 font-semibold">
+            <span className="relative">
+              Learn more
+              <span
+                aria-hidden="true"
+                className="absolute left-0 -bottom-0.5 h-[2px] w-full origin-left scale-x-0 bg-stone-950 transition-transform duration-300 ease-out group-hover:scale-x-100"
+              />
+            </span>
+            <ArrowRight
+              size={16}
+              className="self-center transition-transform duration-300 ease-out group-hover:translate-x-1"
+            />
+          </span>
         </div>
         <AlertCircle size={18} className="hidden md:flex" />
-      </div>
+      </Link>
 
       <div className="p-4 pt-12 md:pt-24 text-stone-300 md:flex">
         <h2 className="flex justify-center items-center text-center text-stone-300 md:text-4xl flex-1 mb-12 text-2xl p-6  md:px-12 lg:px-24 tracking-wide font-normal">

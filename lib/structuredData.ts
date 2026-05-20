@@ -242,6 +242,153 @@ export const sptHowToSchema = {
   ],
 };
 
+export const cftOverviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Combat Field Test (CFT): Events, Standards, and Combat MOSs",
+  description:
+    "Comprehensive guide to the Combat Field Test (CFT): the seven events, the 30-minute time standard, the 24 combat MOSs that take it, and the phased rollout timeline.",
+  mainEntityOfPage: `${SITE_URL}/cft`,
+  url: `${SITE_URL}/cft`,
+  inLanguage: "en-US",
+  about: { "@type": "Thing", name: "Combat Field Test" },
+  keywords: [
+    "Army CFT",
+    "Combat Field Test",
+    "Army fitness test",
+    "CFT events",
+    "CFT MOS",
+    "AFT vs CFT",
+  ],
+  image: {
+    "@type": "ImageObject",
+    url: `${SITE_URL}/android-chrome-512x512.png`,
+    width: 512,
+    height: 512,
+  },
+  datePublished: "2026-05-19",
+  dateModified: "2026-05-19",
+  author: { "@id": ORG_ID },
+  publisher: { "@id": ORG_ID },
+  isPartOf: { "@id": WEBSITE_ID },
+};
+
+export const cftEventsItemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "The seven events of the Combat Field Test",
+  description:
+    "The seven events of the Combat Field Test (CFT), performed continuously and scored on total time, with a 30-minute standard.",
+  itemListOrder: "https://schema.org/ItemListOrderAscending",
+  numberOfItems: 7,
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "One-Mile Run",
+      description:
+        "Opening one-mile run performed in the Army Combat Uniform with combat boots.",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Dead-Stop Push-Ups",
+      description:
+        "30 repetitions of dead-stop push-ups assessing upper-body strength under fatigue.",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "100-Meter Sprint",
+      description:
+        "All-out 100-meter sprint that measures anaerobic power.",
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "Sandbag Lift",
+      description:
+        "16 lifts of a 40-pound sandbag onto a 65-inch platform.",
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
+      name: "Water Can Carry",
+      description:
+        "A 50-meter carry of two five-gallon Army water cans (40 pounds each).",
+    },
+    {
+      "@type": "ListItem",
+      position: 6,
+      name: "Movement Drill",
+      description:
+        "A 25-meter high crawl followed by 25 meters of three-to-five-second rushes.",
+    },
+    {
+      "@type": "ListItem",
+      position: 7,
+      name: "Final One-Mile Run",
+      description:
+        "A second one-mile run measuring aerobic endurance under accumulated fatigue.",
+    },
+  ],
+};
+
+export const cftFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the Combat Field Test (CFT)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The Combat Field Test (CFT) is a mission-based annual fitness test for Soldiers in 24 designated combat military occupational specialties. It consists of seven events performed continuously and scored on total time, with a 30-minute standard. Soldiers test in the Army Combat Uniform, combat boots, and a brown T-shirt, with no cover.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "When does the Army CFT start?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The Army CFT begins phased implementation on April 17, 2026, when Soldiers in the designated combat MOSs will take the CFT as a diagnostic test. No adverse administrative actions result from a failed attempt through April 16, 2027. Testing for record begins April 17, 2027.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Who has to take the Army CFT?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Soldiers in 24 designated combat MOSs take the CFT. Active duty, Active Guard Reserve, and Reserve Component Soldiers on active-duty orders for 365 days or more in combat specialties take one AFT and one CFT every year. Other Reserve Component Soldiers in combat specialties take one fitness test per calendar year, alternating between the AFT and the CFT.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are the seven events of the Army CFT?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The seven CFT events, performed continuously, are: a one-mile run, 30 dead-stop push-ups, a 100-meter sprint, 16 sandbag lifts of 40 pounds onto a 65-inch platform, a 50-meter water can carry with two 40-pound cans, a 50-meter movement drill (25-meter high crawl plus 25 meters of three-to-five-second rushes), and a final one-mile run.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is the CFT replacing the AFT?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. The CFT is an additional, mission-based fitness test for Soldiers in combat MOSs. It complements the Army Fitness Test (AFT) rather than replacing it. Soldiers in combat specialties take both tests on a defined cadence based on their component and duty status.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How is the Army CFT scored?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The CFT is scored on total time to complete all seven events as a single continuous sequence. The 30-minute standard applies to the entire sequence, not to any single event.",
+      },
+    },
+  ],
+};
+
 export const tmrHowToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",

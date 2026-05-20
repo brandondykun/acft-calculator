@@ -120,6 +120,20 @@ const NavBar = () => {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
+            <Link href="/cft" legacyBehavior passHref>
+              <NavigationMenuLink className={`${navigationMenuTriggerStyle()}`}>
+                <span
+                  className={`w-full ${
+                    currentRoute === "/cft" ? "text-amber-400" : ""
+                  }`}
+                >
+                  CFT <span className="text-xs font-light">(NEW)</span>
+                </span>
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
             <Link href="/aft-calculator" legacyBehavior passHref>
               <NavigationMenuLink className={`${navigationMenuTriggerStyle()}`}>
                 <span
@@ -127,8 +141,7 @@ const NavBar = () => {
                     currentRoute === "/aft-calculator" ? "text-amber-400" : ""
                   }`}
                 >
-                  AFT Calculator{" "}
-                  <span className="text-xs font-light">(NEW)</span>
+                  AFT Calculator
                 </span>
               </NavigationMenuLink>
             </Link>
@@ -193,6 +206,9 @@ const NavBar = () => {
               <CloseMenuLink href="/about" setOpen={setOpen}>
                 About
               </CloseMenuLink>
+              <CloseMenuLink href="/cft" setOpen={setOpen}>
+                CFT <span className="text-amber-500 text-sm">(NEW)</span>
+              </CloseMenuLink>
               <div className="flex items-center gap-2 mt-6 mb-2">
                 <div className="text-stone-300 tracking-wider w-fit font-bold">
                   TOOLS
@@ -200,8 +216,7 @@ const NavBar = () => {
                 <div className="h-[1px] bg-stone-300 flex-1"></div>
               </div>
               <CloseMenuLink href="/aft-calculator" setOpen={setOpen}>
-                AFT Calculator{" "}
-                <span className="text-amber-500 text-sm">(NEW)</span>
+                AFT Calculator
               </CloseMenuLink>
               <CloseMenuLink href="/calculator" setOpen={setOpen}>
                 ACFT Calculator
